@@ -1,0 +1,57 @@
+﻿@model Category;
+
+@{
+    ViewBag.Title = "Məhsullar";
+    Layout = "_Layout";
+}
+
+@section Style
+{
+    <link rel="stylesheet" href="">
+    
+}
+
+<div id="tp-breadcrumb" class="tp-breadcrumb">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                    </li>
+                    <li>
+                        <a >Məhsullar</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.breadcrumb -->
+<div id="main-container" class="main-container">
+    <!-- main container -->
+    <div class="woo-shop" id="woo-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>@ViewBag.productCount</h2>
+                </div>
+                @foreach (var product in Model.Products)
+                {
+                    <div class="col-md-4 my-4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="~/img/@product.Image" alt="@product.Image">
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Name</h5>
+                                <p class="card-text">@product.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /.main container -->

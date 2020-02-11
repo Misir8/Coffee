@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Category>;
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Kateqoriya";
+}
+
+<div id="tp-breadcrumb" class="tp-breadcrumb">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                    </li>
+                    <li class="active">Kateqoriya </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.breadcrumb -->
+<style type="text/css">.product-wrap{height: 221px;overflow: hidden;}.products .product-box h2 {text-transform:uppercase;text-align:center;}</style>
+<div id="main-container" class="main-container">
+<!-- main container -->
+<div class="woo-shop" id="woo-shop">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<!-- shop listing start -->
+<div class="shop-listing">
+<!-- products -->
+<div class="row">
+<div class="col-md-12">
+<div class="products">
+<div class="row">
+@foreach (var category in Model)
+{
+    <div class="col-md-4 wow zoomIn animated" data-wow-delay="0.0s" style="visibility: visible;-webkit-animation-delay: 0.0s; -moz-animation-delay: 0.0s; animation-delay: 0.0s;">
+        <div class="product-box">
+            <a asp-controller="Category" asp-action="Products" asp-route-id="@category.Id" rel="nofollow">
+                <div class="product-wrap">
+                    <img src="~/img/@category.Image" alt="@category.Image" style="height: inherit; object-fit: cover">
+                </div>
+            </a>
+            <div class="product-info">
+                <h2>
+                    <a asp-controller="Category" asp-action="Products" asp-route-id="@category.Id">@category.Name</a>
+                </h2>
+                <a asp-controller="Category" asp-action="Products" asp-route-id="@category.Id">Məhsullar</a>
+            </div>
+        </div>
+    </div>
+}
+
+</div>
+</div>
+</div>
+</div>
+<!-- products ends-->
+</div>
+<!-- shop listing end -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /.main container -->

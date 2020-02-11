@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ContactInfo>;
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "_Layout";
+}
+
+
+@section Styles
+{
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+        td{
+            text-align: center;
+            vertical-align: middle !important;
+        }
+    </style>
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Əlaqə Məlumatları</strong>
+        </div>
+        <div class="card-body">
+            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Əlaqə məlumatları</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var contact in Model)
+                {
+                    <tr>
+                        <td>@Html.Raw(contact.Info)</td>
+                        <td>
+                            <a asp-action="edit" asp-route-id="@contact.Id" class="btn-warning btn">Dəyiş</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

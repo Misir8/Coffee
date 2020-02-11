@@ -1,0 +1,90 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Coffe.Models.Product>;
+@using ReflectionIT.Mvc.Paging;
+@addTagHelper *, ReflectionIT.Mvc.Paging;
+@{
+    ViewBag.Title = "Product";
+    Layout = "_Layout";
+}
+
+@section Styles
+{
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+        td{
+            text-align: center;
+            vertical-align: middle !important;
+        }
+        .pagination li{
+            border: 1px solid #a5a5a5;
+                margin: 0 10px
+        }
+        .pagination li a{
+            display: inline-block;
+            padding: 10px;
+            margin: 0 5px;
+        }
+        .pagination .active{
+            background: #0e90d2;
+            
+        }
+        .pagination .active a{
+            color: #fff;
+        }
+    </style>
+}
+
+
+<div class="col-md-12">
+    <div class="card">
+        <a asp-action="create" class="btn btn-outline-primary btn-block">Yeni Məhsul Əlavə Et</a>
+        <div class="card-header">
+            <strong class="card-title">Məhsullar</strong>
+        </div>
+        <div class="card-body">
+            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Şəkil</th>
+                    <th>Ad</th>
+                    <th>Mətn</th>
+                    <th>Qiymət</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td><img src="~/img/@product.Image" alt="slider"></td>
+                        <td>@product.Name</td>
+                        <td class="description-product">@product.Description</td>
+                        <td>
+                            <a asp-action="edit" asp-route-id="@product.Id" class="btn-warning btn">Dəyiş</a>
+                            <a asp-action="delete" asp-route-id="@product.Id" class="btn-danger btn">Sil</a>
+                            <a asp-action="details" asp-route-id="@product.Id" class="btn-info btn">Ətraflı</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            <nav aria-label="Product Paging">
+                @await this.Component.InvokeAsync("Pager", new {PagingList = this.Model})
+            </nav>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script >
+    var desc = document.querySelectorAll('.description-product');
+    for(var des of desc){
+        if(des.textContent.length > 20){
+            des.textContent = des.textContent.substring(0, 20) + '...';
+        }
+    }
+    </script>
+}

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MailKit" Version="2.5.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
+      <PackageReference Include="ReflectionIT.Mvc.Paging" Version="4.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\About\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\ForgotPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\ForgotPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\PasswordConfirm.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\ResetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\ResetPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Product\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Vacancy\Index.cshtml" />
+    </ItemGroup>
+
+
+</Project>

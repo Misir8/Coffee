@@ -1,0 +1,229 @@
+﻿@model IEnumerable<History>;
+
+@{
+    ViewData["Title"] = "Tariximiz";
+    Layout = "_Layout";
+}
+
+<div id="tp-page-header" class="tp-page-header">
+    <!-- page header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Tariximiz</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page header -->
+<div id="tp-breadcrumb" class="tp-breadcrumb">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                    </li>
+                    <li class="active">Tariximiz</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-container" class="main-container">
+<!-- main container -->
+<div id="tp-service-detail" class="tp-service-detail">
+    <!-- service detaile -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 left-sidebar">
+                <!-- left sidebar -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="service-block">
+                            <div class="service-content">
+                                <!-- info -->
+                                <h1>Tariximiz</h1>
+                                <!-- /.info -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bullet">
+                    </div>
+                    <!-- /.bullet -->
+                    <style type="text/css">.font16{font-size:17px;}</style>
+                    <div class="col-md-12 text-justify font17">
+                        @foreach (var history in Model)
+                        {
+                            <p>@history.Description</p>
+                        }
+                    </div>
+                    <div class="col-md-12">
+                        <p>&nbsp;</p>
+                        <div class="h3">Həmçinin</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a asp-controller="About" asp-action="Index">Biz Kimik?</a>
+                            </li>
+                            <li class="list-group-item">
+                               <a asp-controller="About" asp-action="Target">Məqsəd və Missiyamız</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a asp-controller="About" asp-action="Value">Dəyərlərimiz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 right-sidebar">
+                <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                    <!-- Right Sidebar -->
+                </a>
+                <div class="row">
+                    <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                    </a>
+                    <div class="col-md-12">
+                        <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                            <!-- Recent Post Widget -->
+                        </a>
+                        <div class="tp-recent-post-widget widget">
+                            <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                                <div class="tp-bg-border tp-bg-box">
+                                    <!-- bg box -->
+                                    <h2>Recent Posts</h2>
+                                </div>
+                                <!-- /.bg box -->
+                            </a>
+                            <div class="tp-bg-box">
+                                <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                                </a>
+                                <ul class="listnone">
+                                    <a href="http://sham-fi.az/en/menu/15/our-offices/">
+
+                                    </a>
+                                    <li>
+                                        <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                                        </a>
+                                        <div class="recent-block mb20">
+                                            <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                                            </a>
+                                            <div class="row">
+                                                <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                                                    <div class="col-md-4">
+                                                        <a href="http://sham-fi.az/#">
+                                                            <img src="./Our Company _ Şam-Fi_files/6k1a0438435.jpg" width="83" alt="" class="img-responsive mb10">
+                                                        </a>
+                                                    </div>
+                                                </a>
+                                                <div class="col-md-8">
+                                                    <a href="http://sham-fi.az/en/menu/15/our-offices/">
+                                                    </a>
+                                                    <h4 class="recent-title mb10">
+                                                        <a href="http://sham-fi.az/en/menu/15/our-offices/"></a><a href="http://sham-fi.az/en/news/30//"></a>
+                                                    </h4>
+                                                    <div class="post-meta">
+                                                        <!-- post meta -->
+                                                        <span class="meta-date">04 February 2020</span>
+                                                    </div>
+                                                    <!-- /.post meta -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="recent-block mb20">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <a href="http://sham-fi.az/#">
+                                                        <img src="./Our Company _ Şam-Fi_files/brokoli-sorbasi176.png" width="83" alt="" class="img-responsive mb10">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="recent-title mb10">
+                                                        <a href="http://sham-fi.az/en/news/29//"></a>
+                                                    </h4>
+                                                    <div class="post-meta">
+                                                        <!-- post meta -->
+                                                        <span class="meta-date">14 Januray 2020</span>
+                                                    </div>
+                                                    <!-- /.post meta -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="recent-block mb20">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <a href="http://sham-fi.az/#">
+                                                        <img src="./Our Company _ Şam-Fi_files/sayt---kenan-sef58.png" width="83" alt="" class="img-responsive mb10">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="recent-title mb10">
+                                                        <a href="http://sham-fi.az/en/news/28//"></a>
+                                                    </h4>
+                                                    <div class="post-meta">
+                                                        <!-- post meta -->
+                                                        <span class="meta-date">25 December 2019</span>
+                                                    </div>
+                                                    <!-- /.post meta -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="recent-block mb20">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <a href="http://sham-fi.az/#">
+                                                        <img src="./Our Company _ Şam-Fi_files/sam-fi-futbol-2019233.png" width="83" alt="" class="img-responsive mb10">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="recent-title mb10">
+                                                        <a href="http://sham-fi.az/en/news/27//"></a>
+                                                    </h4>
+                                                    <div class="post-meta">
+                                                        <!-- post meta -->
+                                                        <span class="meta-date">25 November 2019</span>
+                                                    </div>
+                                                    <!-- /.post meta -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="recent-block mb20">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <a href="http://sham-fi.az/#">
+                                                        <img src="./Our Company _ Şam-Fi_files/kenan-sefin-lezzet-sirri-sayt-23.png" width="83" alt="" class="img-responsive mb10">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4 class="recent-title mb10">
+                                                        <a href="http://sham-fi.az/en/news/26//"></a>
+                                                    </h4>
+                                                    <div class="post-meta">
+                                                        <!-- post meta -->
+                                                        <span class="meta-date">19 November 2019</span>
+                                                    </div>
+                                                    <!-- /.post meta -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.Right Sidebar -->
+        </div>
+    </div>
+</div>
+<!-- /.service detaile -->
+</div>

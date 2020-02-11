@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0021)http://sham-fi.az/en/ -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<base href="http://sham-fi.az/">--><base href=".">
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="~/bootstrap/bootstrap.min.css">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/animate.min.css" rel="stylesheet">
+    <link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/font/MaxProCondensed.woff">
+    <link rel="stylesheet" href="~/font/MaxProCondensed-Bold.woff">
+    <link rel="stylesheet" href="~/font/MaxProCondensed-Heavy.woff">
+    <link rel="stylesheet" href="~/font/MaxProCondensed-Medium.woff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @RenderSection("Style", false)
+    <!-- favicon icon -->
+    
+</head>
+
+
+<body class="animsition">
+<!-- /.top header -->
+<div id="sticky-wrapper" class="sticky-wrapper" style="height: 83px;"><div class="header" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <a class="navbar-brand wow fadeInDown animated" href="http://sham-fi.az/en" title="Logo" style="visibility: visible;"><img src="~/img/logo.svg" class="" alt=""></a>
+            </div>
+            <div class="col-lg-8 pm0">
+                <div id="navigation"><div id="menu-button">Menu</div>
+                    <ul class="menu-navbar">
+                        <li class="wow fadeInDown active animated" data-wow-delay="0s" style="visibility: visible;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s;"><a asp-controller="Home" asp-action="Index">Ana Səhfə</a></li>
+                        <li class="wow fadeInDown has-sub animated" data-wow-delay="0.1s" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;"><span class="submenu-button"></span><a href="javadvript:void(0)">Haqqında</a> <ul>
+                                <li><a asp-controller="About" asp-action="Index" class="animsition-link">Biz Kimik?</a></li>
+                                <li><a asp-controller="About" asp-action="Target" class="animsition-link">Məqsəd və Missiyamız</a></li>
+                                <li><a asp-controller="About" asp-action="History">Tariximiz</a></li>
+                                <li><a asp-controller="About" asp-action="Value">Dəyərlərimiz</a></li>
+                            </ul>
+                        </li>
+                        <li class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><a class="animsition-link" asp-controller="Category" asp-action="Index">Kateqoriya</a></li>
+                        <li class="wow fadeInDown animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;"><a class="animsition-link" asp-controller="Vacancy" asp-action="Index">Karyera</a></li>
+                        <li class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;"><a class="animsition-link" href="http://sham-fi.az/en/menu/7/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div> 
+
+@RenderBody()
+<div class="p-footer"></div>
+<div class="footer">
+    <!-- footer -->
+    <!-- /.footer -->
+    <div class="tiny-footer">
+        <!-- tiny footer -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p>Myenterprice © 2019. All Rights Reserved </p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="ti-ft-social">
+                        <a href="https://www.facebook.com/ShamFiLLC/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/sham-fi-international-trading-company/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/shamfi.mmc/" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.tiny footer -->
+    
+
+</div>
+
+<script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <script src="~/bootstrap/bootstrap.min.js"></script>
+
+
+    <!--<script type="text/javascript" src="js/animsition.js"></script> -->
+    <script type="text/javascript" src="~/js/wow.js"></script> <!-- wow.js and animsition.js makes conflict -->
+    <script src="~/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/jquery/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="~/jquery/jquery.sticky.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+<script >
+    var menu = document.querySelector("#menu-button");
+    menu.classList.add("remove-menu");
+    var removeMenu = document.querySelector('.remove-menu');
+    removeMenu.remove();
+    
+    var menuBtn = document.querySelector('#navigation #menu-button');
+    var menuNavbar = document.querySelector(".menu-navbar");
+    var bool = false;
+    menuBtn.addEventListener("click", function() {
+      bool = !bool;
+      if(bool){
+          menuNavbar.style.display = "block";
+      }else{
+          menuNavbar.style.display = "none";
+      }
+    })
+    
+    </script>
+@RenderSection("Script", false)
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model Slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="card">
+            <img class="card-img-top" src="~/img/@Model.Image" alt="slider">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Subtitle</h5>
+                <h5 class="card-title">@Model.Title</h5>
+                <a asp-action="Index" class="btn btn-primary">Geri qayıt</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
