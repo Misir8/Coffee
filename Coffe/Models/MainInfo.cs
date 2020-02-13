@@ -53,7 +53,11 @@ namespace Coffe.Models
 
         public string GuaranteeNumber { get; set; }
         //guarantee
+        public string OthersInfo { get; set; }
 
         public List<Experience> Experiences { get; set; }
+        public List<Languange> Languanges { get; set; }
+        public List<Computer> Computers { get; set; }
+        public List<Education> Educations { get; set; }
     }
 }

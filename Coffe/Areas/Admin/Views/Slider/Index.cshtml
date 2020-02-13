@@ -22,7 +22,6 @@
 
 <div class="col-md-12">
     <div class="card">
-        <a asp-action="create" class="btn btn-outline-primary btn-block">Yeni Slayder Əlavə Et</a>
         <div class="card-header">
             <strong class="card-title">Slayder</strong>
         </div>
@@ -44,7 +43,6 @@
                         <td>@slider.Subtitle</td>
                         <td>
                             <a asp-action="edit" asp-route-id="@slider.Id" class="btn-warning btn">Dəyiş</a>
-                            <a asp-action="delete" asp-route-id="@slider.Id" class="btn-danger btn">Sil</a>
                             <a asp-action="details" asp-route-id="@slider.Id" class="btn-info btn">Ətraflı</a>
                         </td>
                     </tr>

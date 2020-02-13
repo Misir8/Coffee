@@ -69,8 +69,6 @@ C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admi
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Index.cshtml.g.cs
-C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
-C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Delete.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Edit.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Details.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_NotificationPartial.cshtml.g.cs
@@ -152,3 +150,10 @@ C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admi
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CategoryCRUD\Details.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Home\Neyse.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Vacancy\Index.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Vacancy\Success.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_NotificationSuccessPartial.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ContactCRUD\Index.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ContactCRUD\Details.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ContactCRUD\Delete.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\News\Index.cshtml.g.cs

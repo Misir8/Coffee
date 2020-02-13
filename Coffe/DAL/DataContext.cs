@@ -1,6 +1,7 @@
 ﻿using Coffe.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Coffe.DAL
 {
@@ -21,6 +22,16 @@ namespace Coffe.DAL
         public DbSet<Target> Targets { get; set; }
 
         public DbSet<Value> Values { get; set; }
+
+        public DbSet<MainInfo> MainInfos { get; set; }
+
+        public DbSet<Education> Educations { get; set; }
+        public DbSet<Experience> Experiences { get; set; }
+        public DbSet<Computer> Computers { get; set; }
+        public DbSet<Languange> Languanges { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<News> Newses { get; set; }
+        
         //Seed Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -89,6 +100,17 @@ namespace Coffe.DAL
 
             modelBuilder.Entity<Value>().HasData(
                 new Value{Id = 1, Description = "Biz müştərilərimizə düzgün şəkildə xidmət göstərə bilmək üçün, dürüstük və güclü mənəvi prinsiplərə əsaslanan, işimizi yüksək məsuliyyət hissi ilə görərək, cavabdehlik daşıyan bir yerli müəssisəyik. Bundan başqa dəyərlərimizi yaşatmaqla, inkişafımız və peşəkar fəaliyyətimiz, davranışlarımız, təqdim etdiyimiz məhsul və xidmətlərimizlə nümunəvi olmağı özümüzə vəzifə bilirik. Habelə, daima böyümək, yeni bazarlarda təmsil olunmaq və istehsal etdiyimiz məhsul çeşidlərini artırmaq iqtidarındayıq. Yaradılmış müəsisədə, əhval-ruhiyyənin ən yüksək səviyyədə olması üçün, hər zaman bir-birimizə hörmət və ehtiramla yanaşırıq."}
+            );
+
+            modelBuilder.Entity<News>().HasData(
+                new News
+                {
+                    Id = 1, Title = "Əsl zeytun yağının rəngi necə olmalıdır?",
+                    Content =
+                        "“Zeytun yağının keyfiyyətli olmasını necə müəyyən edək?” sualının cavabını, ümumilikdə, dad, qoxu və rəng kimi xüsusiyyətlərə baxaraq tapmağa çalışırıq. Unutmaq olmaz ki, bu xüsusiyyətlərə görə zeytun yağını seçmək aldadıcı ola bilir. Çünki duyğu üzvlərimiz bizi yanılda bilir və yuxarıda qeyd olunanlar təkbaşına keyfiyyət müəyyən edən amil deyildir. Hətta vurğulamaq lazımdır ki, gözümüzün axtardığı o yaşıl zeytun yağı görüntüsü bizi ən çox aldadan faktordur.  Sizin də bugünə qədər “həqiqi zeytun yağı yaşıl olur” fikri ilə seçim etdiyiniz zeytun yağı haqqındakı doğru bilinən bu yanlışa gəlin birlikdə aydınlıq gətirək.",
+                    Image = "medium_ag-olan592.png"
+                },
+                new News{Id = 2, Title = "Kurukahveci Mehmet Efendi Bakı qəhvə və çay festivalında iştirak etdi", Content = "Dünyaca məşhur türk qəhvəsi brendi olan Kurukahveci Mehmet Efendi 24-26 yanvar tarixlərində keçirilən Bakı qəhvə və çay festivalında iştirak etdi. Festival müddətində iştirakçılar türk qəhvəsinin dadına baxaraq 19-cu əsrdən bəri fəaliyyət göstərən brend haqqında, eləcə də, türk qəhvəsinin hazırlanma qaydası haqqında geniş informasiya əldə etdilər. 1871-ci ildən bu günə qədər qəhvə istehsalına bir incəsənət kimi yanaşan “Kurukahveci Mehmet Efendi” dünyanın bir çox ölkəsində - Asiya, Avropa, Amerika və Avstraliya qitələri daxil ən çox istifadə olunan türk qəhvəsi brendidir.əzərinizə çatdıraq ki, Mehmet Efendi markasının ölkə üzrə rəsmi distribütoru Şam-Fi MMC-dir."}
             );
         }
     }

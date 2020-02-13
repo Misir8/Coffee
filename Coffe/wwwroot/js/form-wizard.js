@@ -43,19 +43,19 @@
             var current_active_step = $(this).parents('.form-wizard').find('.form-wizard-step.active');
             var progress_line = $(this).parents('.form-wizard').find('.form-wizard-progress-line');
 
-            // // fields validation
-            // parent_fieldset.find('.required').each(function() {
-            //     if( $(this).val() == "" ) {
-            //         $(this).addClass('input-error');
-            //         parent_fieldset.find('.warning').fadeIn();
-            //         next_step = false;
-            //     }
-            //     else {
-            //         $(this).removeClass('input-error');
-            //         parent_fieldset.find('.warning').fadeOut();
-            //     }
-            // });
-            // // fields validation
+            // fields validation
+            parent_fieldset.find('.required').each(function() {
+                if( $(this).val() == "" ) {
+                    $(this).addClass('input-error');
+                    parent_fieldset.find('.warning').fadeIn();
+                    next_step = false;
+                }
+                else {
+                    $(this).removeClass('input-error');
+                    parent_fieldset.find('.warning').fadeOut();
+                }
+            });
+            // fields validation
 
             if( next_step ) {
                 parent_fieldset.fadeOut(400, function() {
@@ -93,19 +93,19 @@
         // submit
         $('.form-wizard').on('submit', function(e) {
 
-            // // fields validation
-            // $(this).find('.required:not(.isCopy .required)').not('.isCopy .required').each(function() {  /* not() and :not not working */
-			// 		if( $(this).val() == "" && !$(this).closest('.isCopy').length /* not working*/ ) { 
-			// 			e.preventDefault(); 
-			// 			$(this).addClass('input-error');
-			// 			$(this).find('.warning').fadeIn();
-			// 		}
-			// 		else {
-			// 			$(this).removeClass('input-error');
-			// 			$(this).find('.warning').fadeOut();
-			// 		}
-            // });
-            // // fields validation
+            // fields validation
+            $(this).find('.required:not(.isCopy .required)').not('.isCopy .required').each(function() {  /* not() and :not not working */
+					if( $(this).val() == "" && !$(this).closest('.isCopy').length /* not working*/ ) { 
+						e.preventDefault(); 
+						$(this).addClass('input-error');
+						$(this).find('.warning').fadeIn();
+					}
+					else {
+						$(this).removeClass('input-error');
+						$(this).find('.warning').fadeOut();
+					}
+            });
+            // fields validation
 
         });
 

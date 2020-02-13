@@ -30,77 +30,7 @@ namespace Coffe.Areas.Admin.Controllers
             var sliders = _context.Sliders.ToList();
             return View(sliders);
         }
-        //CREATE
-        public IActionResult Create()
-        {
-            return View();
-        }
         
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Slider slider)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(slider);
-            }
-            if (slider.Photo == null)
-            {
-                ModelState.AddModelError("Image", "Şəkil seçin");
-                return View(slider);
-            }
-            if (!slider.Photo.IsImage())
-            {
-                ModelState.AddModelError("Photo", "Şəkilin formatı jpg, jpeg, png, svg və ya gif formatında olmalıdır");
-                return View(slider);
-            }
-            if (!slider.Photo.IsLarger(5))
-            {
-                ModelState.AddModelError("Photo", "Şəkilin həcmi 5mg-dan çox olmamalıdır");
-                return View(slider);
-            }
-            slider.Image = await slider.Photo.SaveFileAsync(_env.WebRootPath, "img");
-            await _context.Sliders.AddAsync(slider);
-            await _context.SaveChangesAsync();
-            TempData["success"] = "Slayder uğurla əlavə edildi";
-            return RedirectToAction(nameof(Index));
-        }
-        
-        //DELETE
-        [HttpGet]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (_context.Sliders.Count() <= 1)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            if (id != null)
-            {
-                Slider slider = await _context.Sliders.FirstOrDefaultAsync(d => d.Id == id);
-                return View(slider);
-            }
-            return NotFound();
-        }
-        
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [ActionName("Delete")]
-        public async Task<IActionResult> DeleteSlider(int? id)
-        {
-            if (id != null)
-            {
-                Slider slider = await _context.Sliders.FirstOrDefaultAsync(d => d.Id == id);
-                if (slider != null)
-                {
-                    IFormFileExtension.Delete(_env.WebRootPath, "img", slider.Image);
-                    _context.Sliders.Remove(slider);
-                    await _context.SaveChangesAsync();
-                    TempData["danger"] = "Slayder uğurla silindi";
-                    return RedirectToAction(nameof(Index));
-                }
-            }
-            return NotFound();
-        }
         
         //EDIT
         public async Task <IActionResult> Edit(int? id)

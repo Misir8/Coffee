@@ -75,8 +75,8 @@ body{
 ::-webkit-scrollbar{width: 10px;background-color: #F5F5F5;}
 ::-webkit-scrollbar-thumb{background-color: #1a59a6;}
 
-body { -webkit-font-smoothing: antialiased; font-family: 'Max Pro Condensed', sans-serif; font-size: 14px; line-height: 30px; color: #757575; }
-.h1, h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 10px; font-family: 'Max Pro Condensed', sans-serif; font-weight: 600; color: #272424; letter-spacing: -1px; }
+body { -webkit-font-smoothing: antialiased; font-family: Roboto, sans-serif; font-size: 14px; line-height: 30px; color: #757575; }
+.h1, h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 10px; font-family: Roboto, sans-serif; font-weight: 600; color: #272424; letter-spacing: -1px; }
 .h1, h1 { font-size: 32px; line-height: 48px; font-weight: 900;}
 h2 { font-size: 22px; line-height: 32px; }
 h3 { font-size: 20px; color: #272424; }
@@ -400,7 +400,7 @@ section.module.parallax-2 { background-image: url("../images/location-pic.jpg");
 
   /********** commen css **********/
 
-  .tp-page-header { background-image: url(../images/page-header2.jpg); padding: 90px 0px; background-position: center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; -o-background-size: cover; }
+  .tp-page-header { background-image: url(../img/2.jpg); padding: 90px 0px; background-position: center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; -o-background-size: cover; }
   .tp-page-header h1,.tp-page-header .h1  { margin-bottom: 0px; color: #fff;text-transform:uppercase; }
   .tp-breadcrumb { background-color: #fbfbfb; padding: 9px 0px; border-bottom: 1px solid #efefef; }
   .tp-breadcrumb .breadcrumb { padding: 0; margin-bottom: 0px; background-color: transparent; border-radius: 0px; }
@@ -748,7 +748,7 @@ section.module.parallax-2 { background-image: url("../images/location-pic.jpg");
   .products .product-box p.rating span a { color: #ddd; }
   .products .product-box p.rating span a:hover { color: #fac11c; }
   .products .product-box p.rating span a.rating-done { color: #fac11c; }
-  .products .product-box p.price { font-family: 'Max Pro Condensed', sans-serif; font-size: 14px; color: #1a59a6; margin-bottom: 10px; letter-spacing: -1px; font-weight: 700; }
+  .products .product-box p.price { font-family:  sans-serif; font-size: 14px; color: #1a59a6; margin-bottom: 10px; letter-spacing: -1px; font-weight: 700; }
   .woo-shop .shop-listing .products .product-box p.price .price-del { text-decoration: line-through; color: #666; padding-right: 10px; }
   .woo-shop .shop-listing .products .product-box a.btn-default i { padding-right: 10px; }
 

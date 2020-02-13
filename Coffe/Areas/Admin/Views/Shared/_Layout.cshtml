@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="~/admin/assets/css/style.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-    @RenderSection("Styles", false);
+    @RenderSection("Styles", false)
 </head>
 
 <body>
@@ -78,6 +78,9 @@
                         </li>
                         <li>
                             <a asp-controller="Target" asp-action="Index">Məqsəd və missiyamız</a>
+                        </li>
+                        <li>
+                            <a asp-controller="ContactCRUD" asp-action="Index">Kontakt messajları</a>
                         </li>
                     </ul>
                 </li>

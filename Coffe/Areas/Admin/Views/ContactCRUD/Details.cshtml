@@ -1,0 +1,19 @@
+﻿@model Contact;
+
+@{
+    ViewBag.Title = "Kontakt mesajları ətraflı";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group">
+                <li class="list-group-item">1. Ad: @Model.Firstname</li>
+                <li class="list-group-item">2. Telefon: @Model.Number</li>
+                <li class="list-group-item">3. Email: @Model.Email</li>
+                <li class="list-group-item">4. Mesaj: @Model.Message</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model Contact
+
+@{
+    ViewBag.Title = "Kontakt mesajın sil";
+    Layout = "_Layout";
+}
+
+
+<h1 class="my-3 text-center">Kontakt mesajın silməyə əminsiniz?</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    @Model.Firstname
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Number</h5>
+                    <p class="card-text">@Model.Message</p>
+                    <form asp-action="Delete">
+                        <input type="submit" value="Sil" class="btn btn-danger"/>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    @Model.Email
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
