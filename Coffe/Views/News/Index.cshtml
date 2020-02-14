@@ -1,17 +1,19 @@
-﻿@{
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Coffe.Models.News>;
+@addTagHelper *, ReflectionIT.Mvc.Paging;
+@{
     ViewBag.Title = "Yeniliklər";
     Layout = "_Layout";
 }
 
 <div id="tp-page-header" class="tp-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Yeniliklər</h1>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Yeniliklər</h1>
             </div>
         </div>
     </div>
+</div>
 <!-- /.page header -->
 <div id="tp-breadcrumb" class="tp-breadcrumb">
     <!-- breadcrumb -->
@@ -20,7 +22,7 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a href="http://sham-fi.az/az">Əsas</a>
+                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
                     </li>
                     <li class="active">Yeniliklər</li>
                 </ol>
@@ -30,197 +32,40 @@
 </div>
 <!-- /.breadcrumb -->
 <div id="main-container" class="main-container">
-<!-- main container -->
-<div id="tp-services-section" class="tp-services-section">
-    <!-- about section -->
-    <div class="container">
-        <div class="row">
+    <!-- main container -->
+    <div id="tp-services-section" class="tp-services-section">
+        <!-- about section -->
+        <div class="container">
+            <div class="row">
 
-            <div class="col-md-4 news-block wow fadeIn animated" data-wow-delay="0.0s" style="visibility: visible;-webkit-animation-delay: 0.0s; -moz-animation-delay: 0.0s; animation-delay: 0.0s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/31/esl-zeytun-yaginin-rengi-nece-olmalidir/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_ag-olan592.png" class="img-responsive" alt="">
-                        </a>
+                @foreach (var news in Model)
+                {
+                    <div class="col-md-4 news-block wow fadeIn animated" data-wow-delay="0.0s" style="visibility: visible;-webkit-animation-delay: 0.0s; -moz-animation-delay: 0.0s; animation-delay: 0.0s;">
+                        <div class="service-block mb30">
+                            <div class="service-img mb30">
+                                <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" class="imghover" style="height: 400px">
+                                    <img src="~/img/@news.Image" class="img-responsive" style="width: 100%;object-fit: cover;height: inherit" alt="@news.Image">
+                                </a>
+                            </div>
+                            <div class="service-content">
+                                <h2>
+                                    <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">@news.Title </a>
+                                </h2>
+                                <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" class="btn btn-default">Ətraflı</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/31/esl-zeytun-yaginin-rengi-nece-olmalidir/">Əsl zeytun yağının rəngi necə olmalıdır? </a>
-                        </h2>
-                        <p>“Zeytun yağının keyfiyyətli olmasını necə müəyyən edək?” sualının cavabını, ...</p>
-                        <a href="http://sham-fi.az/az/news/31/esl-zeytun-yaginin-rengi-nece-olmalidir/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/30/kurukahveci-mehmet-efendi-baki-qehve-ve-cay-festiv/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_6k1a0438435.jpg" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/30/kurukahveci-mehmet-efendi-baki-qehve-ve-cay-festiv/">Kurukahveci Mehmet Efendi Bakı qəhvə və çay festivalında iştirak etdi - Şəkillər/Video</a>
-                        </h2>
-                        <p>Dünyaca məşhur türk qəhvəsi brendi olan Kurukahveci Mehmet Efendi 24-26 yanvar tarixlərində ...</p>
-                        <a href="http://sham-fi.az/az/news/30/kurukahveci-mehmet-efendi-baki-qehve-ve-cay-festiv/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/29/kenanin-lezzet-sirri---qaymaqli-brokoli-sorbasi/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_brokoli-sorbasi176.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/29/kenanin-lezzet-sirri---qaymaqli-brokoli-sorbasi/">Kənanın Ləzzət Sirri - Qaymaqlı brokoli şorbası?</a>
-                        </h2>
-                        <p>
-                            Soyuq havalarda dadlı və sağlam şorbaya nə deyirsiz?
+                }
 
-                            Elə isə yaxın əyləşin. Kənan şef bu ...
-                        </p>
-                        <a href="http://sham-fi.az/az/news/29/kenanin-lezzet-sirri---qaymaqli-brokoli-sorbasi/" class="btn btn-default">Ətraflı</a>
-                    </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-6 text-left">
+                    <nav aria-label="News Paging">
+                        @await this.Component.InvokeAsync("Pager", new {PagingList = this.Model})
+                    </nav>
                 </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn" data-wow-delay="0.0s" style="visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;-webkit-animation-delay: 0.0s; -moz-animation-delay: 0.0s; animation-delay: 0.0s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/28/kenanin-lezzet-sirri---quakamole-ve-makaron-salati/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_sayt---kenan-sef58.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/28/kenanin-lezzet-sirri---quakamole-ve-makaron-salati/">Kənanın Ləzzət Sirri - Quakamole və makaron salatı necə hazırlanır?</a>
-                        </h2>
-                        <p>Kənanın Ləzzət Sirrinin bu dəfəki buraxılışında şefin təqdimatında Meksika mətbəxinə ...</p>
-                        <a href="http://sham-fi.az/az/news/28/kenanin-lezzet-sirri---quakamole-ve-makaron-salati/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/27/sam-fi-futbol-kuboku-2019-turnirine-yekun-vurulub-/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_sam-fi-futbol-2019233.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/27/sam-fi-futbol-kuboku-2019-turnirine-yekun-vurulub-/">"Şam-Fi Futbol Kuboku 2019" turnirinə yekun vurulub - FOTO|VİDEO</a>
-                        </h2>
-                        <p>23 noyabr tarixində&nbsp;əməkdaşlarımız arasında baş tutan "Şam-Fi Futbol Kuboku 2019" turnirinin ...</p>
-                        <a href="http://sham-fi.az/az/news/27/sam-fi-futbol-kuboku-2019-turnirine-yekun-vurulub-/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/26/kenanin-lezzet-sirri---pinar-labne-ile-neler-hazir/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_kenan-sefin-lezzet-sirri-sayt-23.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/26/kenanin-lezzet-sirri---pinar-labne-ile-neler-hazir/">Kənanın Ləzzət Sirri - Pınar Labne ilə nələr hazırlamaq olar?</a>
-                        </h2>
-                        <p>Kənanın Ləzzət Sirri layihəsinin ilk buraxılışında Kənan şef Pınar Labne ilə bir-birindən dadlı desert, ...</p>
-                        <a href="http://sham-fi.az/az/news/26/kenanin-lezzet-sirri---pinar-labne-ile-neler-hazir/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn" data-wow-delay="0.0s" style="visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;-webkit-animation-delay: 0.0s; -moz-animation-delay: 0.0s; animation-delay: 0.0s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/25/menim-coreyim-musabiqesinden---foto-video/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_img_717167.jpg" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/25/menim-coreyim-musabiqesinden---foto-video/">"Mənim çörəyim" müsabiqəsindən - Foto|Video</a>
-                        </h2>
-                        <p>20 oktyabr tarixində Ümumdünya Çörək Günü münasibətilə “Azeri Home ...</p>
-                        <a href="http://sham-fi.az/az/news/25/menim-coreyim-musabiqesinden---foto-video/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/23/superfresh-milfoy-ile-almali-piroq/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_elmali-pay375.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/23/superfresh-milfoy-ile-almali-piroq/">SuperFresh Milföy ilə almalı piroq</a>
-                        </h2>
-                        <p>
-                            Nələr lazımdır?
-
-                            Yaşıl alma – 5 ədəd
-
-                            SuperFresh Milföy – 2 ədəd (400 qr)
-
-                            Xərə ...
-                        </p>
-                        <a href="http://sham-fi.az/az/news/23/superfresh-milfoy-ile-almali-piroq/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 news-block wow fadeIn" data-wow-delay="0.4s" style="visibility: hidden; -webkit-animation-name: none; -moz-animation-name: none; animation-name: none;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
-                <div class="service-block mb30">
-                    <div class="service-img mb30">
-                        <a href="http://sham-fi.az/az/news/22/step-it-academy-ile-emekdasliq-barede-memorandum-i/" class="imghover">
-                            <img src="./Yeniliklər _ Şam-Fi_files/medium_dsc_8433-min655.jpg" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <div class="service-content">
-                        <h2>
-                            <a href="http://sham-fi.az/az/news/22/step-it-academy-ile-emekdasliq-barede-memorandum-i/">“STEP IT Academy” ilə əməkdaşlıq barədə memorandum imzalanıb</a>
-                        </h2>
-                        <p>Beynəlxalq qida məhsullarının distribütoru olan Şam-Fi ilə STEP IT Academy arasında əməkdaşlıq ...</p>
-                        <a href="http://sham-fi.az/az/news/22/step-it-academy-ile-emekdasliq-barede-memorandum-i/" class="btn btn-default">Ətraflı</a>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-xs-12 col-sm-6 text-left">
-                <ul class="pagination ">
-                    <li class="disabled">
-                        <a href="javascript:void(0)" class="fa fa-angle-double-left"></a>
-                    </li>
-                    <li class="disabled">
-                        <a class="fa fa-chevron-left" href="javascript:void(0)"></a>
-                    </li>
-                    <li class="current">
-                        <a href="http://sham-fi.az/#" onclick="javascript:void(0)"> 1 </a>
-                    </li>
-                    <li>
-                        <a href="http://sham-fi.az/az/menu/4/news/?&amp;p=2">2</a>
-                    </li>
-                    <li>
-                        <a href="http://sham-fi.az/az/menu/4/news/?&amp;p=3">3</a>
-                    </li>
-                    <li>
-                        <a href="http://sham-fi.az/az/menu/4/news/?&amp;p=2" class="fa fa-chevron-right"></a>
-                    </li>
-                    <li>
-                        <a href="http://sham-fi.az/az/menu/4/news/?&amp;p=3" class="fa fa-angle-double-right"></a>
-                    </li>
-                </ul>
             </div>
         </div>
+        <!-- /.about section -->
     </div>
-    <!-- /.about section -->
-</div>
-<!-- /.main container -->
+    <!-- /.main container -->
 </div>

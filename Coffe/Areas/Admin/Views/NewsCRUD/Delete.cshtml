@@ -1,0 +1,29 @@
+﻿@model News
+
+@{
+    ViewBag.Title = "Xəbər sil";
+    Layout = "_Layout";
+}
+
+<h1>Xəbəri silməyə əminsiniz?</h1>
+<div class="row">
+    <div class="col-lg-4 col-2"></div>
+    <div class="col-lg-4 col-8">
+        <div class="card">
+            <div class="card-img-top">
+                <img src="~/img/@Model.Image" alt="slider" class="w-100">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.Title</h5>
+                <p class="card-title">@Html.Raw(Model.Content)</p>
+                <form asp-action="Delete">
+                    <input type="submit" value="Sil" class="btn btn-danger"/>
+                    <a asp-action="Index" class="btn btn-info">Geri qayıt</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-2"></div>
+</div>
+
+

@@ -1,26 +1,15 @@
-﻿@model About
+﻿@model News;
 
 @{
-    ViewBag.Title = "About Edit";
+    ViewBag.Title = "Yeni Xəbər";
     Layout = "_Layout";
-}
-
-@section Styles
-{
-    <style>
-        img{
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-    </style>
 }
 
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <strong class="card-title">Biz Kimik Dəyiş</strong>
+                <strong class="card-title">Yeni Xəbər Əlavə Et</strong>
             </div>
             <div class="card-body">
                 <div id="pay-invoice">
@@ -28,7 +17,7 @@
                         <div class="card-title">
                         </div>
                         <hr>
-                        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                        <form asp-action="Create" method="post" enctype="multipart/form-data">
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <div class="form-group">
                                 <label asp-for="Photo"></label>
@@ -36,17 +25,17 @@
                                 <span asp-validation-for="Photo" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>İndiki Şəkil</label>
-                                <img src="~/img/@Model.Image" alt="@Model.Image"/>
-                                <input type="hidden" name="Image" value="@Model.Image"/>
+                                <label asp-for="Title" class="control-label"></label>
+                                <input asp-for="Title" class="form-control"/>
+                                <span asp-validation-for="Title" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label asp-for="Description" class="control-label"></label>
-                                <input asp-for="Description" class="form-control"/>
-                                <span asp-validation-for="Description" class="text-danger"></span>
+                                <label asp-for="Content" class="control-label"></label>
+                                <textarea asp-for="Content" class="form-control" name="Content"></textarea>
+                                <span asp-validation-for="Content" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Dəyiş" class="btn btn-block btn-success"/>
+                                <input type="submit" value="Əlavə Et" class="btn btn-block btn-success"/>
                             </div>
                         </form>
                     </div>
@@ -66,5 +55,12 @@
             asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
             asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
     </script>
-    
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+    <script>
+            ClassicEditor
+                .create( document.querySelector( '#Content' ) )
+                .catch( error => {
+                    console.error( error );
+                } );
+        </script>
 }

@@ -110,7 +110,11 @@ namespace Coffe.DAL
                         "“Zeytun yağının keyfiyyətli olmasını necə müəyyən edək?” sualının cavabını, ümumilikdə, dad, qoxu və rəng kimi xüsusiyyətlərə baxaraq tapmağa çalışırıq. Unutmaq olmaz ki, bu xüsusiyyətlərə görə zeytun yağını seçmək aldadıcı ola bilir. Çünki duyğu üzvlərimiz bizi yanılda bilir və yuxarıda qeyd olunanlar təkbaşına keyfiyyət müəyyən edən amil deyildir. Hətta vurğulamaq lazımdır ki, gözümüzün axtardığı o yaşıl zeytun yağı görüntüsü bizi ən çox aldadan faktordur.  Sizin də bugünə qədər “həqiqi zeytun yağı yaşıl olur” fikri ilə seçim etdiyiniz zeytun yağı haqqındakı doğru bilinən bu yanlışa gəlin birlikdə aydınlıq gətirək.",
                     Image = "medium_ag-olan592.png"
                 },
-                new News{Id = 2, Title = "Kurukahveci Mehmet Efendi Bakı qəhvə və çay festivalında iştirak etdi", Content = "Dünyaca məşhur türk qəhvəsi brendi olan Kurukahveci Mehmet Efendi 24-26 yanvar tarixlərində keçirilən Bakı qəhvə və çay festivalında iştirak etdi. Festival müddətində iştirakçılar türk qəhvəsinin dadına baxaraq 19-cu əsrdən bəri fəaliyyət göstərən brend haqqında, eləcə də, türk qəhvəsinin hazırlanma qaydası haqqında geniş informasiya əldə etdilər. 1871-ci ildən bu günə qədər qəhvə istehsalına bir incəsənət kimi yanaşan “Kurukahveci Mehmet Efendi” dünyanın bir çox ölkəsində - Asiya, Avropa, Amerika və Avstraliya qitələri daxil ən çox istifadə olunan türk qəhvəsi brendidir.əzərinizə çatdıraq ki, Mehmet Efendi markasının ölkə üzrə rəsmi distribütoru Şam-Fi MMC-dir."}
+                new News
+                {
+                    Id = 2, Title = "Kurukahveci Mehmet Efendi Bakı qəhvə və çay festivalında iştirak etdi", Content = "Dünyaca məşhur türk qəhvəsi brendi olan Kurukahveci Mehmet Efendi 24-26 yanvar tarixlərində keçirilən Bakı qəhvə və çay festivalında iştirak etdi. Festival müddətində iştirakçılar türk qəhvəsinin dadına baxaraq 19-cu əsrdən bəri fəaliyyət göstərən brend haqqında, eləcə də, türk qəhvəsinin hazırlanma qaydası haqqında geniş informasiya əldə etdilər. 1871-ci ildən bu günə qədər qəhvə istehsalına bir incəsənət kimi yanaşan “Kurukahveci Mehmet Efendi” dünyanın bir çox ölkəsində - Asiya, Avropa, Amerika və Avstraliya qitələri daxil ən çox istifadə olunan türk qəhvəsi brendidir.əzərinizə çatdıraq ki, Mehmet Efendi markasının ölkə üzrə rəsmi distribütoru Şam-Fi MMC-dir.",
+                    Image = "medium_brokoli-sup-sayt851.png"
+                }
             );
         }
     }

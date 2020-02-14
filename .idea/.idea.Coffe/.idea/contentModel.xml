@@ -16,6 +16,7 @@
               <e p="ContactInfoController.cs" t="Include" />
               <e p="HistoryController.cs" t="Include" />
               <e p="HomeController.cs" t="Include" />
+              <e p="NewsCRUDController.cs" t="Include" />
               <e p="ProductCRUDController.cs" t="Include" />
               <e p="RolesController.cs" t="Include" />
               <e p="SliderController.cs" t="Include" />
@@ -50,6 +51,13 @@
                 <e p="Index.cshtml" t="Include" />
               </e>
               <e p="Home" t="Include">
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="NewsCRUD" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
               </e>
               <e p="ProductCRUD" t="Include">
@@ -144,6 +152,8 @@
           <e p="20200213075208_Contact.Designer.cs" t="Include" />
           <e p="20200213122450_news.cs" t="Include" />
           <e p="20200213122450_news.Designer.cs" t="Include" />
+          <e p="20200214074616_add image in news table .cs" t="Include" />
+          <e p="20200214074616_add image in news table .Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -193,6 +203,7 @@
           <e p="ForgotPasswordViewModel.cs" t="Include" />
           <e p="HomeIndexViewModel.cs" t="Include" />
           <e p="LoginViewModel.cs" t="Include" />
+          <e p="NewsViewModel.cs" t="Include" />
           <e p="RegisterViewModel.cs" t="Include" />
           <e p="RegisterViewModelFooter.cs" t="Include" />
           <e p="ResetPasswordViewModel.cs" t="Include" />
@@ -216,10 +227,10 @@
           </e>
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
-            <e p="Neyse.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
           </e>
           <e p="News" t="Include">
+            <e p="Details.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +17,6 @@ namespace Coffe.Models
         [Required(ErrorMessage = "Mətn xanası boş ola bilməz")]
         [DisplayName("Mətn")]
         public string Content { get; set; }
-
         public string Image { get; set; }
         [DisplayName("Şəkil")]
         [NotMapped]

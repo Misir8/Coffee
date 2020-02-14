@@ -2,66 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69145c6b-3105-4f6e-b25c-fa45926f2293" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ContactCRUDController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactCRUD/Delete.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactCRUD/Details.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactCRUD/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Component/AddressViewComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Component/EmailViewComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Component/NumberViewComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Models/Computer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Models/Contact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Models/Education.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Models/Languange.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Models/News.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/ViewModels/CareerViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/ViewModels/ContactViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Contact/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Shared/_NotificationSuccessPartial.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Vacancy/Success.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/NewsCRUDController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Details.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/ViewModels/NewsViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coffe/Views/News/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/SliderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/SliderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Slider/Create.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Slider/Delete.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Slider/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Slider/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Coffe.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Coffe.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/ContactController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Controllers/VacancyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/VacancyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/DAL/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/DAL/DataContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Models/MainInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/MainInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Views/Category/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Category/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Views/Category/Products.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Category/Products.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/News.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/News.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/History.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/History.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/Target.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/Target.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/Value.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/Value.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Views/Vacancy/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Vacancy/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/Home/Neyse.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.TagHelpers.output.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Abouts/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Abouts/Edit.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Create.cshtml.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Delete.cshtml.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Products.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Products.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/History.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/History.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Target.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Target.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Value.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Value.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Vacancy/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Vacancy/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/wwwroot/css/form-wizard-blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/wwwroot/css/form-wizard-blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/wwwroot/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/wwwroot/js/form-wizard.js" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/wwwroot/js/form-wizard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Home/Neyse.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/News/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/News/Index.cshtml.g.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,9 +117,12 @@
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Roles/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_NotificationPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/RolesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_NotificationDangerPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/ViewModels/ChangeRoleViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_NotificationWarningPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ContactInfoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactInfo/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -145,6 +130,7 @@
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/HistoryController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/233E8C8F-0E85-4B63-AE7F-9B374A12D146/29/ViewComponentContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactInfo/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/History/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/233E8C8F-0E85-4B63-AE7F-9B374A12D146/AC/IViewComponentResult.cs" root0="SKIP_HIGHLIGHTING" />
@@ -152,16 +138,20 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/039A9227-3B14-4039-9764-FE65F5B7CDF1/7/IHtmlContent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/History/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ProductCRUDController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/NewsCRUDController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ValueController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Models/Slider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Value/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/ViewModels/NewsViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/DAL/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Areas/Admin/Views/Value/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Coffe/Views/News/Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/ViewModels/HomeIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Controllers/CategoryController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Coffe/Migrations/20200210080536_category.cs" root0="FORCE_HIGHLIGHTING" />
@@ -203,24 +193,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Delete.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Delete.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Controllers/CategoryController.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Edit.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/CategoryCRUDController.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Details.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Resources.Designer.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Resources/Controllers.HomeController.ru.Designer.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Startup.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Pages/Vacancy/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Models/Mainİnfo.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Models/Experience.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Models/Languange.cs" />
         <option value="$PROJECT_DIR$/Coffe/Models/Computer.cs" />
         <option value="$PROJECT_DIR$/Coffe/Models/MainInfo.cs" />
         <option value="$PROJECT_DIR$/Coffe/Models/Education.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Views/Vacancy/Success.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/ViewModels/CareerViewModel.cs" />
         <option value="$PROJECT_DIR$/Coffe/Controllers/VacancyController.cs" />
@@ -239,21 +214,36 @@
         <option value="$PROJECT_DIR$/Coffe/Controllers/ContactController.cs" />
         <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ContactCRUD.cs" />
         <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Pages/ContactCRUD/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactCRUD/Index.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactCRUD/Details.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ContactCRUD/Delete.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ContactCRUDController.cs" />
-        <option value="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" />
         <option value="$PROJECT_DIR$/Coffe/Pages/News/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Views/Vacancy/Index.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Views/Category/Products.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Views/Category/Index.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Views/Contact/Index.cshtml" />
         <option value="$PROJECT_DIR$/Coffe/Views/Shared/_Layout.cshtml" />
-        <option value="$PROJECT_DIR$/Coffe/Models/News.cs" />
         <option value="$PROJECT_DIR$/Coffe/DAL/DataContext.cs" />
+        <option value="$PROJECT_DIR$/Coffe/Models/News.cs" />
+        <option value="$PROJECT_DIR$/Coffe/ViewModels/NewsViewModel.cs" />
+        <option value="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" />
+        <option value="$PROJECT_DIR$/Coffe/Views/About/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Views/About/History.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Views/About/Target.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Views/About/Value.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Pages/NewsCRUD/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Views/News/Details.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Delete.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Create.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/NewsCRUDController.cs" />
+        <option value="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Details.cshtml" />
       </list>
     </option>
   </component>
@@ -376,6 +366,8 @@
       <workItem from="1581574450556" duration="5632000" />
       <workItem from="1581580232330" duration="7803000" />
       <workItem from="1581596372751" duration="354000" />
+      <workItem from="1581664457447" duration="1754000" />
+      <workItem from="1581666313413" duration="8968000" />
     </task>
     <servers />
   </component>
@@ -412,22 +404,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="433" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1581489092864" />
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom" timestamp="1581596351018">
+    <state width="1877" height="374" key="GridCell.Tab.0.bottom" timestamp="1581680246156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581596351018" />
-    <state width="1877" height="374" key="GridCell.Tab.0.center" timestamp="1581596351018">
+    <state width="1877" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581680246156" />
+    <state width="1877" height="374" key="GridCell.Tab.0.center" timestamp="1581680246156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581596351018" />
-    <state width="1877" height="374" key="GridCell.Tab.0.left" timestamp="1581596351018">
+    <state width="1877" height="374" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581680246156" />
+    <state width="1877" height="374" key="GridCell.Tab.0.left" timestamp="1581680246155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581596351018" />
-    <state width="1877" height="374" key="GridCell.Tab.0.right" timestamp="1581596351018">
+    <state width="1877" height="374" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581680246155" />
+    <state width="1877" height="374" key="GridCell.Tab.0.right" timestamp="1581680246156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581596351018" />
+    <state width="1877" height="374" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581680246156" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581513098404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
