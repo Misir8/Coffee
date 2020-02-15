@@ -1,0 +1,27 @@
+﻿@model MainInfo
+
+@{
+    ViewBag.Title = "CV-ni sil";
+    Layout = "_Layout";
+}
+
+<h1>Cv-ni silməyə əminsiniz?</h1>
+<div class="row">
+    <div class="col-lg-4 col-2"></div>
+    <div class="col-lg-4 col-8">
+        <div class="card">
+            <div class="card-header">
+                <h3>@Model.Firstname @Model.Lastname</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@Model.Email</h5>
+                <h6 class="my-2">@Model.BirthCity</h6>
+                <form asp-action="Delete">
+                    <input type="submit" value="Sil" class="btn btn-danger"/>
+                    <a asp-action="Index" class="btn btn-info">Geri qayıt</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-2"></div>
+</div>

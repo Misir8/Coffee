@@ -1,0 +1,55 @@
+﻿@model CareerCRUDViewModel
+
+@{
+    ViewBag.Title = "CV məlumatları";
+    Layout = "_Layout";
+}
+
+@section Styles
+{
+    <style>
+        td{
+            text-align: center;
+            vertical-align: middle !important;
+        }
+    </style>
+}
+
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">CV-lər</strong>
+        </div>
+        <div class="card-body">
+            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>Ad soyad</th>
+                    <th>Atasının adı</th>
+                    <th>Doğum tarixi</th>
+                    <th>Email</th>
+                    <th>Doğulduğu şəhər</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var info in Model.MainInfos)
+                {
+                    <tr>
+                        <td>@info.Firstname</td>
+                        <td>@info.Lastname</td>
+                        <td>@info.BirthDay / @info.BirthMonth / @info.BirthYear</td>
+                        <td>@info.Email</td>
+                        <td>@info.BirthCity</td>
+                        <td class="description-product"></td>
+                        <td>
+                            <a asp-action="details" asp-route-id="@info.Id" class="btn-info btn">Ətraflı</a>
+                            <a asp-action="delete" asp-route-id="@info.Id" class="btn-danger btn">Sil</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

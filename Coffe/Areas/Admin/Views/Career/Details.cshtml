@@ -1,0 +1,84 @@
+﻿@model CareerCRUDViewModel
+
+@{
+    ViewBag.Title = "CV ətraflı";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <h2 class="my-3">Əsas məlumat:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">1.Ad, soyad: @Model.MainInfo.Firstname </li>
+                <li class="list-group-item">2.Atanızın Adı : @Model.MainInfo.Lastname </li>
+                <li class="list-group-item">3.Doğum tarixi : @Model.MainInfo.BirthDay / @Model.MainInfo.BirthMonth / @Model.MainInfo.BirthYear</li>
+                <li class="list-group-item">4.Doğulduğunuz yer : @Model.MainInfo.BirthCity</li>
+                <li class="list-group-item">5.Hərbi xidmətdə olmusunuzmu? @ViewBag.Army</li>
+                <li class="list-group-item">6.Əlaqə məlumatları : Ev - @Model.MainInfo.HomeNumber, Mobile - @Model.MainInfo.MobileNumber, Email - @Model.MainInfo.Email, Digər - @Model.MainInfo.OthersNumber</li>
+                <li class="list-group-item">7.Yaşadığınız ünvan : @Model.MainInfo.Address</li>
+                <li class="list-group-item">8.Sürücülük vəsiqəsinin kateqoriyası : @Model.MainInfo.DriverLicense</li>
+                <li class="list-group-item">9.Şəxsi avtomobiliniz varmı? @ViewBag.Car </li>
+                <li class="list-group-item">10.Əvvəlki iş yerlərinizlə əlaqəniz varmı? @ViewBag.PrevJob </li>
+                <li class="list-group-item">11.Hansı vəzifə üçün müraciət edirsiniz? @Model.MainInfo.PositionApply</li>
+                <li class="list-group-item">12.Vakansiya barədə məlumatı hardan əldə etmisiniz : @Model.MainInfo.VacancyInfo</li>
+            </ul>
+            <h2 class="my-3">İş təcrübəsi:</h2>
+            <ul class="list-group">
+                @foreach (var exp in Model.Experiences)
+                {
+                    if (exp.MainInfoId == Model.MainInfo.Id)
+                    {
+                        <li class="list-group-item">1.İşlədiyiniz müəssisənin adı: @exp.Company </li>
+                        <li class="list-group-item">2.İşlədiyiniz müddət: @exp.WorkedDay gün, @exp.WorkedMonth ay, @exp.WorkedYear il</li>
+                        <li class="list-group-item">3.Vəzifəniz və işin qısa təsviri : @exp.PositionAbout</li>
+                        <li class="list-group-item">4.Aldığınız əməkhaqqı : @exp.Salary</li>
+                        <li class="list-group-item">5.İşdən çıxmağınızın səbəbi : @exp.LeftJob</li>
+                        <li class="list-group-item">6.İş yerinin telefon nömrəsi : @exp.WorkNumber</li>
+                    }
+                }
+            </ul>
+            <h2 class="my-3">Dil bilikləri:</h2>
+            <ul class="list-group">
+                @foreach (var languange in Model.Languanges)
+                {
+                    if (languange.MainInfoId == Model.MainInfo.Id)
+                    {
+                        <li class="list-group-item">1.Dilin adı: @languange.LangName </li>
+                        <li class="list-group-item">2.Oxuma: @languange.Read</li>
+                        <li class="list-group-item">3.Yazma : @languange.Write</li>
+                        <li class="list-group-item">4.Anlama : @languange.Understood</li>
+                    }
+                }
+            </ul>
+            <h2 class="my-3">Kompüter bilikləri:</h2>
+            <ul class="list-group">
+                @foreach (var comp in Model.Computers)
+                {
+                    if (comp.MainInfoId == Model.MainInfo.Id)
+                    {
+                        <li class="list-group-item">1.Kompüter proqramının adı: @comp.Name </li>
+                        <li class="list-group-item">2.Bilik səviyyəsi: @comp.Degree</li>
+                    }
+                }
+            </ul>
+            <h2 class="my-3">Təhsil:</h2>
+            <ul class="list-group">
+                @foreach (var edu in Model.Educations)
+                {
+                    if (edu.MainInfoId == Model.MainInfo.Id)
+                    {
+                        <li class="list-group-item">1.Ali təhsil aldığı müəssisə: @edu.UniName</li>
+                        <li class="list-group-item">2.Təhsil müddəti: @edu.EducationDate</li>
+                        <li class="list-group-item">3.İxtisas: @edu.Speciality</li>
+                        <li class="list-group-item">4.Dərəcə: @edu.Degree</li>
+                    }
+                }
+            </ul>
+            <h2 class="my-3">Əlavə məlumatlar:</h2>
+            <ul class="list-group">
+                <li class="list-group-item">@Model.MainInfo.OthersInfo</li>
+            </ul>
+        </div>
+    </div>
+</div>

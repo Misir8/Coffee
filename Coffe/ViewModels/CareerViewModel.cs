@@ -71,7 +71,9 @@ namespace Coffe.ViewModels
         //EDUCATION
         
         //COMPUTER
+        [Required(ErrorMessage = "Komputer bilikləri seçin")]
         public List<string> ComputerCourseName { get; set; }
+        [Required (ErrorMessage = "Komputer bilikləri səviyyəsin seçin")]
         public List<string> CoumputerDegree { get; set; }
 
         public Computer Computer { get; set; }
@@ -99,10 +101,13 @@ namespace Coffe.ViewModels
         //EXPERIENCE
         
         //Language
-        
+        [Required(ErrorMessage = "Dil bilikləri bölməsin doldurun")]
         public List<string> LangName { get; set; }
+        [Required(ErrorMessage = "Dil bilikləri bölməsin doldurun")]
         public List<string> Read { get; set; }
+        [Required(ErrorMessage = "Dil bilikləri bölməsin doldurun")]
         public List<string> Write { get; set; }
+        [Required(ErrorMessage = "Dil bilikləri bölməsin doldurun")]
         public List<string> Understood { get; set; }
 
         public Languange Languange { get; set; }

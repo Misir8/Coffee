@@ -149,7 +149,6 @@ C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admi
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CategoryCRUD\Edit.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CategoryCRUD\Details.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Vacancy\Index.cshtml.g.cs
-C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Vacancy\Success.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_NotificationSuccessPartial.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ContactCRUD\Index.cshtml.g.cs
@@ -162,3 +161,6 @@ C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admi
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NewsCRUD\Delete.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NewsCRUD\Edit.cshtml.g.cs
 C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NewsCRUD\Details.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Career\Index.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Career\Details.cshtml.g.cs
+C:\Users\User\RiderProjects\Coffe\Coffe\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Career\Delete.cshtml.g.cs

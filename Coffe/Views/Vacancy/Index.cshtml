@@ -45,13 +45,13 @@
 </div>
 <!-- /.breadcrumb -->
 <div id="main-container" class="main-container">
+<partial name="_NotificationSuccessPartial"/>
 <!-- main container -->
 <div id="tp-contact-us" class="tp-contact-us">
 <!-- contact us -->
 <div class="container">
 <!-- Form progress -->
 <div class="form-wizard form-header-classic form-body-classic">
-
 <form role="form" asp-controller="Vacancy" asp-action="Index" method="post">
 <div class="form-wizard-steps form-wizard-tolal-steps-6">
     <div class="form-wizard-progress">
@@ -341,7 +341,7 @@
             <option value="D">D</option>
             <option value="E">E</option>
         </select>
-        
+
     </div>
 </div>
 <div class="form-group row">
@@ -427,7 +427,7 @@
 @*     $1$ #1# *@
 @*     $1$ </div> #1# *@
 @* </div> *@
-<div class="validation" style="color: red" asp-validation-summary="All" ></div>
+<div class="validation" style="color: red" asp-validation-summary="All"></div>
 <div class="form-wizard-buttons">
     <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
     <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
@@ -679,7 +679,7 @@
                     <label>
                         <small>Təhsil müddəti: <span>*</span></small>
                     </label>
-                    <input type="text" asp-for="EducationDate"  class="form-control required">
+                    <input type="text" asp-for="EducationDate" class="form-control required">
                     <span asp-validation-for="EducationDate"></span>
                 </div>
                 <div class="form-group col-md-12">
@@ -754,6 +754,13 @@
     $("select").each(function(index, element) {
         element.removeAttribute("multiple");
     });
+    
+    var alertNotification = document.querySelector(".alert");
+        if (alertNotification != null){
+            setTimeout(function() {
+                  alertNotification.remove()
+                }, 10000)
+        }
     </script>
 }
 

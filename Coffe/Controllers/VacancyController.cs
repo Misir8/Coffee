@@ -39,7 +39,7 @@ namespace Coffe.Controllers
             
             if (cvm.Married == null)
             {
-                ModelState.AddModelError("Ailə vəziyyəti", "Zəhmət olmasa ailə vəziyəti xanasın olmasa");
+                ModelState.AddModelError("Ailə vəziyyəti", "Zəhmət olmasa ailə vəziyətinizi seçin");
                 return View(cvm);
             }
 
@@ -215,14 +215,9 @@ namespace Coffe.Controllers
                     }
                 }
             }
-
-           
-            return RedirectToAction("Success", "Vacancy");
-        }
-
-        public IActionResult Success()
-        {
+            TempData["success"] = "CV-niz uğurla göndərildi";
             return View();
         }
+
     }
 }
