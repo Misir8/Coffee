@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,80 +18,158 @@
     <link href="~/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="~/owl-carousel/owl.theme.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .user-icon {
+            filter: invert(30%) sepia(29%) saturate(3612%) hue-rotate(192deg) brightness(86%) contrast(87%);
+            transition: 0.3s all;
+            width: 15px;
+            height: 15px;
+        }
+
+        .user-icon-container:hover .user-icon {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(334deg) brightness(103%) contrast(103%);
+        }
+
+        .logoff {
+            padding: 0 !important;
+            border: none !important;
+        }
+
+            .logoff:hover {
+                padding: 0 !important;
+                background: transparent !important;
+                border: none !important;
+            }
+    </style>
     @RenderSection("Style", false)
     <!-- favicon icon -->
-    
+
 </head>
 
 
 <body class="animsition">
-<!-- /.top header -->
-<div id="sticky-wrapper" class="sticky-wrapper" style="height: 83px;"><div class="header" style="">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <a class="navbar-brand wow fadeInDown animated"  title="Logo" style="visibility: visible;"><img src="~/img/logo.svg" class="" alt=""></a>
-            </div>
-            <div class="col-lg-8 pm0">
-                <div id="navigation"><div id="menu-button">Menu</div>
-                    <ul class="menu-navbar">
-                        <li class="wow fadeInDown active animated" data-wow-delay="0s" style="visibility: visible;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s;"><a asp-controller="Home" asp-action="Index">Ana Səhfə</a></li>
-                        <li class="wow fadeInDown has-sub animated" data-wow-delay="0.1s" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;"><span class="submenu-button"></span><a href="javadvript:void(0)">Haqqında</a> <ul>
-                                <li><a asp-controller="About" asp-action="Index" class="animsition-link">Biz Kimik?</a></li>
-                                <li><a asp-controller="About" asp-action="Target" class="animsition-link">Məqsəd və Missiyamız</a></li>
-                                <li><a asp-controller="About" asp-action="History">Tariximiz</a></li>
-                                <li><a asp-controller="About" asp-action="Value">Dəyərlərimiz</a></li>
-                            </ul>
-                        </li>
-                        <li class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><a class="animsition-link" asp-controller="Category" asp-action="Index">Kateqoriya</a></li>
-                        <li class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><a class="animsition-link" asp-controller="News" asp-action="Index">Yeniliklər</a></li>
-                        <li class="wow fadeInDown animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;"><a class="animsition-link" asp-controller="Vacancy" asp-action="Index">Karyera</a></li>
-                        <li class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;"><a class="animsition-link" asp-controller="Contact" asp-action="Index">Əlaqə</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div> 
+    <!-- /.top header -->
+    <div id="sticky-wrapper" class="sticky-wrapper" style="height: 83px;">
+        <div class="header" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a class="navbar-brand wow fadeInDown animated" title="Logo" style="visibility: visible;">
+                            <img src="~/img/logo.svg" class="" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-8 pm0">
+                        <div id="navigation">
+                            <div id="menu-button">Menu</div>
+                            <ul class="menu-navbar">
+                                <li class="wow fadeInDown active animated" data-wow-delay="0s" style="visibility: visible;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s;">
+                                    <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
+                                </li>
+                                <li class="wow fadeInDown has-sub animated" data-wow-delay="0.1s" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                                    <span class="submenu-button"></span><a href="javadvript:void(0)">@Localizer["About"]</a>
+                                    <ul>
+                                        <li>
+                                            <a asp-controller="About" asp-action="Index" class="animsition-link">@Localizer["WhoAreWe"]</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="About" asp-action="Target" class="animsition-link">@Localizer["Mission"]</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="About" asp-action="History">@Localizer["History"]</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="About" asp-action="Value">@Localizer["Value"]</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                                    <a class="animsition-link" asp-controller="Category" asp-action="Index">@Localizer["Category"]</a>
+                                </li>
+                                <li class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                                    <a class="animsition-link" asp-controller="News" asp-action="Index">@Localizer["News"]</a>
+                                </li>
+                                <li class="wow fadeInDown animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                                    <a class="animsition-link" asp-controller="Vacancy" asp-action="Index">@Localizer["Career"]</a>
+                                </li>
+                                <li class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
+                                    <a class="animsition-link" asp-controller="Contact" asp-action="Index">@Localizer["Contact"]</a>
+                                </li>
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <li class="wow fadeInDown has-sub animated user-icon-container" data-wow-delay="0.1s" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                                        <span class="submenu-button"></span>
+                                        <a href="javadvript:void(0)">
+                                            <img src="~/img/user.svg" alt="user" class="user-icon">
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a asp-controller="Account" asp-action="Register" class="animsition-link">@Localizer["Registr"]</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Account" asp-action="Login">@Localizer["Login"]</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                }
 
-@RenderBody()
-<div class="p-footer"></div>
-<div class="footer">
-    <!-- footer -->
-    <!-- /.footer -->
-    <div class="tiny-footer">
-        <!-- tiny footer -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <p>Myenterprice © 2019. All Rights Reserved </p>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="ti-ft-social">
-                        <a  target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a  target="_blank">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        <a  target="_blank">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+                                else
+                                {
+                                    <li class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
+                                        <a>
+                                            <form method="post" asp-controller="Account" asp-action="LogOff">
+                                                <input class="logoff" type="submit" value="Çıx" />
+                                            </form>
+                                        </a>
+                                    </li>
+                                }
+                                <li class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
+                                    @await Html.PartialAsync("_SelectLanguagePartial")
+                                </li>
+
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /.tiny footer -->
-    
+    @RenderBody()
+    <div class="p-footer"></div>
+    <div class="footer">
+        <!-- footer -->
+        <!-- /.footer -->
+        <div class="tiny-footer">
+            <!-- tiny footer -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p>Myenterprice &copy; 2019.@Localizer["Right"]</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="ti-ft-social">
+                            <a target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.tiny footer -->
 
-</div>
 
-<script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"></script>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
     <script src="~/bootstrap/bootstrap.min.js"></script>
 
 
@@ -98,25 +179,25 @@
     <script type="text/javascript" src="~/jquery/jquery.easing.min.js"></script>
     <script type="text/javascript" src="~/jquery/jquery.sticky.js"></script>
     <script type="text/javascript" src="~/js/main.js"></script>
-<script >
-    var menu = document.querySelector("#menu-button");
-    menu.classList.add("remove-menu");
-    var removeMenu = document.querySelector('.remove-menu');
-    removeMenu.remove();
-    
-    var menuBtn = document.querySelector('#navigation #menu-button');
-    var menuNavbar = document.querySelector(".menu-navbar");
-    var bool = false;
-    menuBtn.addEventListener("click", function() {
-      bool = !bool;
-      if(bool){
-          menuNavbar.style.display = "block";
-      }else{
-          menuNavbar.style.display = "none";
-      }
-    })
-    
+    <script>
+        var menu = document.querySelector("#menu-button");
+        menu.classList.add("remove-menu");
+        var removeMenu = document.querySelector('.remove-menu');
+        removeMenu.remove();
+
+        var menuBtn = document.querySelector('#navigation #menu-button');
+        var menuNavbar = document.querySelector(".menu-navbar");
+        var bool = false;
+        menuBtn.addEventListener("click", function () {
+            bool = !bool;
+            if (bool) {
+                menuNavbar.style.display = "block";
+            } else {
+                menuNavbar.style.display = "none";
+            }
+        })
+
     </script>
-@RenderSection("Script", false)
+    @RenderSection("Script", false)
 </body>
 </html>

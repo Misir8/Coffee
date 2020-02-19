@@ -63,7 +63,9 @@ namespace Coffe.DAL
                     Id = 1,
                     Description =
                         "“MY ENTERPRISE” Məhdud Məsuliyyətli Cəmiyyət 2019_cu ildə təsis edilmişdir. Müəssisə hal_hazırda öz fəaliyyət sahəsi istiqamətində, ilkin olaraq, Azərbaycan bazarında əhəmiyyətli yer tutmağı planlaşdırır.	“MY ENTERPRISE” MMC_də coxillik iş təcrübəsinə malik, ixtisaslaşmış işçilər çalışmaqdadır. Əsas fəaliyyət sahəsi isə yerli istehsalat və distribusiyadır (dağıtımdır).",
-                    Image = "1.jpg"
+                    Image = "1.jpg",
+                    EnDescription = "Englis about",
+                    RuDescription = "На русском"
                 }
             );
 

@@ -1,5 +1,7 @@
 ﻿@model ReflectionIT.Mvc.Paging.PagingList<Coffe.Models.News>;
 @addTagHelper *, ReflectionIT.Mvc.Paging;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
     ViewBag.Title = "Yeniliklər";
     Layout = "_Layout";
@@ -51,7 +53,7 @@
                                 <h2>
                                     <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">@news.Title </a>
                                 </h2>
-                                <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" class="btn btn-default">Ətraflı</a>
+                                <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" class="btn btn-default">@Localizer["ButtonMore"]</a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +62,7 @@
                 <div class="clearfix"></div>
                 <div class="col-xs-12 col-sm-6 text-left">
                     <nav aria-label="News Paging">
-                        @await this.Component.InvokeAsync("Pager", new {PagingList = this.Model})
+                        @await this.Component.InvokeAsync("Pager", new { PagingList = this.Model })
                     </nav>
                 </div>
             </div>

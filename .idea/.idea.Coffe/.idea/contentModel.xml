@@ -165,6 +165,8 @@
           <e p="20200215083808_computer prop required.Designer.cs" t="Include" />
           <e p="20200215084756_added required language prop.cs" t="Include" />
           <e p="20200215084756_added required language prop.Designer.cs" t="Include" />
+          <e p="20200219082737_added about translate.cs" t="Include" />
+          <e p="20200219082737_added about translate.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -194,12 +196,20 @@
             </e>
           </e>
         </e>
-        <e p="Pages" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
           <e p="PublishProfiles" t="Include">
             <e p="CustomProfile.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Views" t="Include">
+            <e p="Home" t="Include">
+              <e p="Index.az.resx" t="Include" />
+              <e p="Index.en.resx" t="Include" />
+              <e p="Index.ru.resx" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Service" t="Include">
@@ -230,6 +240,15 @@
             <e p="Target.cshtml" t="Include" />
             <e p="Value.cshtml" t="Include" />
           </e>
+          <e p="Account" t="Include">
+            <e p="ForgotPassword.cshtml" t="Include" />
+            <e p="ForgotPasswordConfirmation.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="PasswordConfirm.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+            <e p="ResetPassword.cshtml" t="Include" />
+            <e p="ResetPasswordConfirmation.cshtml" t="Include" />
+          </e>
           <e p="Category" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Products.cshtml" t="Include" />
@@ -248,6 +267,7 @@
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_NotificationSuccessPartial.cshtml" t="Include" />
+            <e p="_SelectLanguagePartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
           </e>
@@ -2872,7 +2892,6 @@
             <e p="5788c06a-d2f1-4ee8-8bc7-34c5e7ada111s-5.jpg" t="Include" />
             <e p="ac311472-fdea-4b8e-9c16-31a2f3e371651.jpg" t="Include" />
             <e p="bebeto2417.png" t="Include" />
-            <e p="d9d951a3-103d-4b81-9338-a77bde86948e4.jpg" t="Include" />
             <e p="e15df24d-5ed0-4650-af01-1b86470c72181.jpg" t="Include" />
             <e p="elvan.png" t="Include" />
             <e p="hqdefault.jpg" t="Include" />
@@ -2892,6 +2911,7 @@
             <e p="slayder-kirlangic542.png" t="Include" />
             <e p="slider-1.jpg" t="Include" />
             <e p="tadim734.png" t="Include" />
+            <e p="user.svg" t="Include" />
           </e>
           <e p="jquery" t="Include">
             <e p="jquery.easing.min.js" t="Include" />

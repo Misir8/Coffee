@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Coffe.DAL;
 using Coffe.ViewModels;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ namespace Coffe.Controllers
         // GET
         public IActionResult Index()
         {
+            ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
             AboutIndexViewModel vm = new AboutIndexViewModel
             {
                 Abouts = _context.Abouts

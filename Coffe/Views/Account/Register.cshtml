@@ -1,0 +1,85 @@
+﻿@model Coffe.ViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "Qeydiyyat";
+    Layout = "_Layout";
+}
+
+@section Style
+{
+    <style>
+        form{
+        margin: 50px 0;
+        }
+        h2{
+        margin-top: 50px;
+        }
+    </style>
+}
+
+<div id="tp-page-header" class="tp-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Qeydiyyat</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="tp-breadcrumb" class="tp-breadcrumb">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                    </li>
+                    <li class="active">Qeydiyyat </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Yeni istifadəçinin qeydiyyatı</h2>
+            <form method="post" asp-controller="Account" asp-action="Register">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email"></label><br />
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label><br />
+                    <input class="form-control" asp-for="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PasswordConfirm"></label><br />
+                    <input class="form-control" asp-for="PasswordConfirm" />
+                    <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                </div>
+                <div>
+                    <input type="submit" value="Qeydiyyat" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Script{
+    
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"
+                    asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.validator">
+            </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"
+                asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
+            </script>
+}

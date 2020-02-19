@@ -1,7 +1,9 @@
 ﻿@model AboutIndexViewModel;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Biz Kimik";
+    ViewData["Title"] = @Localizer["WhoAreWe"];
     Layout = "_Layout";
 }
 
@@ -10,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Biz Kimik</h1>
+                <h1>@Localizer["WhoAreWe"]</h1>
             </div>
         </div>
     </div>
@@ -23,63 +25,78 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                        <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
-                    <li class="active">Biz Kimik?</li>
+                    <li class="active">@Localizer["WhoAreWe"]</li>
                 </ol>
             </div>
         </div>
     </div>
 </div>
 <div id="main-container" class="main-container">
-<!-- main container -->
-<div id="tp-service-detail" class="tp-service-detail">
-    <!-- service detaile -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 left-sidebar">
-                <!-- left sidebar -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="service-block">
-                            <div class="service-content">
-                                <!-- info -->
-                                <h1>Biz Kimik?</h1>
-                                <!-- /.info -->
+    <!-- main container -->
+    <div id="tp-service-detail" class="tp-service-detail">
+        <!-- service detaile -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 left-sidebar">
+                    <!-- left sidebar -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="service-block">
+                                <div class="service-content">
+                                    <!-- info -->
+                                    <h1>@Localizer["WhoAreWe"]</h1>
+                                    <!-- /.info -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="bullet">
-                    </div>
-                    <!-- /.bullet -->
-                    <style type="text/css">.font16{font-size:17px;}</style>
-                    <div class="col-md-12 text-justify font17">
-                        @foreach (var about in Model.Abouts)
-                        {
-                            <p>@about.Description</p>
+                        <div class="bullet">
+                        </div>
+                        <!-- /.bullet -->
+                        <style type="text/css">
+                            .font16 {
+                                font-size: 17px;
+                            }
+                        </style>
+                        <div class="col-md-12 text-justify font17">
+                            @foreach (var about in Model.Abouts)
+                            {
+                                if (ViewBag.Culture == "az")
+                                {
+                                    <p>@about.Description</p>
+                                }
+                                else if (ViewBag.Culture == "ru")
+                                {
+                                    <p>@about.RuDescription</p>
+                                }
+                                else if (ViewBag.Culture == "en")
+                                {
+                                    <p>@about.EnDescription</p>
+                                }
 
-                            <p><img class="img-responsive" src="~/img/@about.Image" alt="@about.Image"/></p>
-                        }
-                    </div>
-                    <div class="col-md-12">
-                        <p>&nbsp;</p>
-                        <div class="h3">Həmçinin</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a asp-controller="About" asp-action="Target">Məqsəd və Missiyamız</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a asp-controller="About" asp-action="History">Tariximiz</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a asp-controller="About" asp-action="Value">Dəyərlərimiz</a>
-                            </li>
-                        </ul>
+                                <p><img class="img-responsive" src="~/img/@about.Image" alt="@about.Image" /></p>
+                            }
+                        </div>
+                        <div class="col-md-12">
+                            <p>&nbsp;</p>
+                            <div class="h3">@Localizer["Also"]</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a asp-controller="About" asp-action="Target">@Localizer["Mission"]</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a asp-controller="About" asp-action="History">@Localizer["History"]</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a asp-controller="About" asp-action="Value">@Localizer["Value"]</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /.service detaile -->
+    <!-- /.service detaile -->
 </div>

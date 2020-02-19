@@ -1,6 +1,10 @@
 ﻿@model HomeIndexViewModel;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+
 @{
-    ViewData["Title"] = "Ana Səhfə";
+    ViewData["Title"] = Localizer["Title"];
     Layout = "_Layout";
 }
 

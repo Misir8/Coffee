@@ -68,6 +68,8 @@ namespace Coffe.Areas.Admin.Controllers
                 }
             }
             aboutDb.Description = about.Description;
+            aboutDb.EnDescription = about.EnDescription;
+            aboutDb.RuDescription = about.RuDescription;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Biz kimik uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));

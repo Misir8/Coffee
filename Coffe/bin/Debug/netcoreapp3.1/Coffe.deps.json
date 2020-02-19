@@ -301,6 +301,17 @@
         "runtime": {
           "Coffe.dll": {}
         },
+        "resources": {
+          "az/Coffe.resources.dll": {
+            "locale": "az"
+          },
+          "en/Coffe.resources.dll": {
+            "locale": "en"
+          },
+          "ru/Coffe.resources.dll": {
+            "locale": "ru"
+          }
+        },
         "compile": {
           "Coffe.dll": {}
         }

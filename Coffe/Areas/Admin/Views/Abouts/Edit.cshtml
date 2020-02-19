@@ -46,6 +46,16 @@
                                 <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
                             <div class="form-group">
+                                <label asp-for="EnDescription" class="control-label"></label>
+                                <input asp-for="EnDescription" class="form-control"/>
+                                <span asp-validation-for="EnDescription" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="RuDescription" class="control-label"></label>
+                                <input asp-for="RuDescription" class="form-control"/>
+                                <span asp-validation-for="RuDescription" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
                                 <input type="submit" value="Dəyiş" class="btn btn-block btn-success"/>
                             </div>
                         </form>
@@ -66,5 +76,5 @@
             asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
             asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
     </script>
-    
+
 }

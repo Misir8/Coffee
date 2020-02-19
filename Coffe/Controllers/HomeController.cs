@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 using Coffe.Models;
 using Coffe.ViewModels;
 using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Http;
 
 namespace Coffe.Controllers
 {
@@ -31,8 +33,17 @@ namespace Coffe.Controllers
             };
             return View(vm);
         }
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
 
-
+            return LocalRedirect(returnUrl);
+        }
 
         public IActionResult Privacy()
         {

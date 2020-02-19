@@ -30,9 +30,15 @@ namespace Coffe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("EnDescription")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
+
+                    b.Property<string>("RuDescription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -43,7 +49,9 @@ namespace Coffe.Migrations
                         {
                             Id = 1,
                             Description = "“MY ENTERPRISE” Məhdud Məsuliyyətli Cəmiyyət 2019_cu ildə təsis edilmişdir. Müəssisə hal_hazırda öz fəaliyyət sahəsi istiqamətində, ilkin olaraq, Azərbaycan bazarında əhəmiyyətli yer tutmağı planlaşdırır.	“MY ENTERPRISE” MMC_də coxillik iş təcrübəsinə malik, ixtisaslaşmış işçilər çalışmaqdadır. Əsas fəaliyyət sahəsi isə yerli istehsalat və distribusiyadır (dağıtımdır).",
-                            Image = "1.jpg"
+                            EnDescription = "Englis about",
+                            Image = "1.jpg",
+                            RuDescription = "На русском"
                         });
                 });
 

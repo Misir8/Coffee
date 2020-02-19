@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 using Coffe.DAL;
 using Coffe.Models;
 using Microsoft.AspNetCore.Builder;
@@ -14,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using ReflectionIT.Mvc.Paging;
 
 namespace Coffe
@@ -30,6 +29,25 @@ namespace Coffe
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddControllersWithViews()
+                .AddDataAnnotationsLocalization()
+                .AddViewLocalization();
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("az"),
+                    new CultureInfo("en"),
+                    new CultureInfo("ru")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("az");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
             services.AddDbContext<DataContext>(options => {
                 options.UseSqlServer(Configuration["Data:ConnectionStrings:Default"]);
             });
@@ -44,7 +62,8 @@ namespace Coffe
                 })
                 .AddEntityFrameworkStores<DataContext>()
                 .AddDefaultTokenProviders();
-            services.AddControllersWithViews();
+                services.AddControllersWithViews()
+                .AddViewLocalization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +80,9 @@ namespace Coffe
                 app.UseHsts();
             }
 
+
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

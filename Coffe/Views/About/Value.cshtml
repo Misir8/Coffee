@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<Value>;
-
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Dəyərlərimiz";
+    ViewData["Title"] = Localizer["Value"];
     Layout = "_Layout";
 }
 
@@ -10,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Dəyərlərimiz</h1>
+                <h1>@Localizer["Value"]</h1>
             </div>
         </div>
     </div>
@@ -23,61 +24,65 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a asp-controller="Home" asp-action="Index">Dəyərlərimiz</a>
+                        <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
-                    <li class="active">Dəyərlərimiz</li>
+                    <li class="active">@Localizer["Value"]</li>
                 </ol>
             </div>
         </div>
     </div>
 </div>
 <div id="main-container" class="main-container">
-<!-- main container -->
-<div id="tp-service-detail" class="tp-service-detail">
-    <!-- service detaile -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 left-sidebar">
-                <!-- left sidebar -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="service-block">
-                            <div class="service-content">
-                                <!-- info -->
-                                <h1>Dəyərlərimiz</h1>
-                                <!-- /.info -->
+    <!-- main container -->
+    <div id="tp-service-detail" class="tp-service-detail">
+        <!-- service detaile -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 left-sidebar">
+                    <!-- left sidebar -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="service-block">
+                                <div class="service-content">
+                                    <!-- info -->
+                                    <h1>@Localizer["Value"]</h1>
+                                    <!-- /.info -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="bullet">
-                    </div>
-                    <!-- /.bullet -->
-                    <style type="text/css">.fot16n{font-size:17px;}</style>
-                    <div class="col-md-12 text-justify font17">
-                        @foreach (var value in Model)
-                        {
-                            <p>@value.Description</p>
-                        }
-                    </div>
-                    <div class="col-md-12">
-                        <p>&nbsp;</p>
-                        <div class="h3">Dəyərlərimiz</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a asp-controller="About" asp-action="Index">Biz Kimik?</a>
-                            </li>
-                            <li class="list-group-item">
-                               <a asp-controller="About" asp-action="Target">Məqsəd və Missiyamız</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a asp-controller="About" asp-action="History">Tariximiz</a>
-                            </li>
-                        </ul>
+                        <div class="bullet">
+                        </div>
+                        <!-- /.bullet -->
+                        <style type="text/css">
+                            .fot16n {
+                                font-size: 17px;
+                            }
+                        </style>
+                        <div class="col-md-12 text-justify font17">
+                            @foreach (var value in Model)
+                            {
+                                <p>@value.Description</p>
+                            }
+                        </div>
+                        <div class="col-md-12">
+                            <p>&nbsp;</p>
+                            <div class="h3">@Localizer["Also"]</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a asp-controller="About" asp-action="Index">@Localizer["WhoAreWe"]</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a asp-controller="About" asp-action="Target">@Localizer["Mission"]</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a asp-controller="About" asp-action="History">@Localizer["History"]</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /.service detaile -->
+    <!-- /.service detaile -->
 </div>
