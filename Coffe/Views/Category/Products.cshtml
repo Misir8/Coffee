@@ -1,25 +1,25 @@
 ﻿@model Category;
-
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewBag.Title = "Məhsullar";
+    ViewBag.Title = Localizer["Products"];
     Layout = "_Layout";
 }
 
 @section Style
 {
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     
+
 }
 <div id="tp-page-header" class="tp-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Məhsullar</h1>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Localizer["Products"]</h1>
             </div>
         </div>
     </div>
+</div>
 <div id="tp-breadcrumb" class="tp-breadcrumb">
     <!-- breadcrumb -->
     <div class="container">
@@ -27,10 +27,10 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                        <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
                     <li>
-                        <a >Məhsullar</a>
+                        <a>@Localizer["Products"]</a>
                     </li>
                 </ol>
             </div>

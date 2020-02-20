@@ -1,31 +1,35 @@
 ﻿@model CareerViewModel;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
 @{
     Layout = "_Layout";
-    ViewBag.Title = "Karyera";
+    ViewBag.Title = Localizer["Career"];
 }
 
 @section Style
 {
     <link rel="stylesheet" href="~/css/form-wizard-blue.css">
     <style>
-        .validation ul li{
-        color: red !important;
+        .validation ul li {
+            color: red !important;
         }
-        .field-validation-error{
-        color: red !important;
+
+        .field-validation-error {
+            color: red !important;
         }
     </style>
 }
 
 <div id="tp-page-header" class="tp-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Karyera</h1>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Localizer["Career"]</h1>
             </div>
         </div>
     </div>
+</div>
 <div id="tp-breadcrumb" class="tp-breadcrumb">
     <!-- breadcrumb -->
     <div class="container">
@@ -33,11 +37,11 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a >Əsas</a>
+                        <a>@Localizer["Home"]</a>
                     </li>
                     <li>
-                        <a >Karyera</a>
-                    </li> <li class="active">Müraciət forması</li>
+                        @Localizer["Career"]
+                    </li>
                 </ol>
             </div>
         </div>
@@ -45,716 +49,813 @@
 </div>
 <!-- /.breadcrumb -->
 <div id="main-container" class="main-container">
-<partial name="_NotificationSuccessPartial"/>
-<!-- main container -->
-<div id="tp-contact-us" class="tp-contact-us">
-<!-- contact us -->
-<div class="container">
-<!-- Form progress -->
-<div class="form-wizard form-header-classic form-body-classic">
-<form role="form" asp-controller="Vacancy" asp-action="Index" method="post">
-<div class="form-wizard-steps form-wizard-tolal-steps-6">
-    <div class="form-wizard-progress">
-        <div class="form-wizard-progress-line" data-now-value="16.66666" data-number-of-steps="6" style="width: 16.66666%;"></div>
-    </div>
-    <!-- Mərhələ 1 -->
-    <div class="form-wizard-step active">
-        <div class="form-wizard-step-icon">
-            <i class="icon-man-people-streamline-user" aria-hidden="true"></i>
-        </div>
-        <p>Əsas məlumat</p>
-    </div>
-    <!-- Mərhələ 1 -->
+    <partial name="_NotificationSuccessPartial" />
+    <!-- main container -->
+    <div id="tp-contact-us" class="tp-contact-us">
+        <!-- contact us -->
+        <div class="container">
+            <!-- Form progress -->
+            <div class="form-wizard form-header-classic form-body-classic">
+                <form role="form" asp-controller="Vacancy" asp-action="Index" method="post">
+                    <div class="form-wizard-steps form-wizard-tolal-steps-6">
+                        <div class="form-wizard-progress">
+                            <div class="form-wizard-progress-line" data-now-value="16.66666" data-number-of-steps="6" style="width: 16.66666%;"></div>
+                        </div>
+                        <!-- Mərhələ 1 -->
+                        <div class="form-wizard-step active">
+                            <div class="form-wizard-step-icon">
+                                <i class="icon-man-people-streamline-user" aria-hidden="true"></i>
+                            </div>
+                            <p>Əsas məlumat</p>
+                        </div>
+                        <!-- Mərhələ 1 -->
+                        <!-- Mərhələ 2 -->
+                        <div class="form-wizard-step">
+                            <div class="form-wizard-step-icon">
+                                <i class="icon-flaticon" aria-hidden="true"></i>
+                            </div>
+                            <p>İş təcrübəsi</p>
+                        </div>
+                        <!-- Mərhələ 2 -->
+                        <!-- Mərhələ 3 -->
+                        <div class="form-wizard-step">
+                            <div class="form-wizard-step-icon">
+                                <i class="icon-speech-streamline-talk-user" aria-hidden="true"></i>
+                            </div>
+                            <p>Dil</p>
+                        </div>
+                        <!-- Mərhələ 3 -->
+                        <!-- Mərhələ 4 -->
+                        <div class="form-wizard-step">
+                            <div class="form-wizard-step-icon">
+                                <i class="icon-laptop-macbook-streamline" aria-hidden="true"></i>
+                            </div>
+                            <p>Kompüter bilikləri</p>
+                        </div>
+                        <!-- Mərhələ 4 -->
+                        <div class="form-wizard-step">
+                            <div class="form-wizard-step-icon">
+                                <i class="icon-book-read-streamline" aria-hidden="true"></i>
+                            </div>
+                            <p>Təhsil </p>
+                        </div>
+                        <div class="form-wizard-step">
+                            <div class="form-wizard-step-icon">
+                                <i class="icon-pe-icon-7-stroke-5" aria-hidden="true"></i>
+                            </div>
+                            <p>Əlavə məlumatlar </p>
+                        </div>
+                    </div>
+                    <!-- Form progress -->
+                    <!-- Form Mərhələ 1 -->
+                    <fieldset class="form-container" style="display: block;">
+                        <!-- Progress Bar -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="16.66666" aria-valuemin="0" aria-valuemax="100" style="width: 16.6666%"></div>
+                        </div>
+                        <!-- Progress Bar -->
+                        <h4>Əsas məlumat: <span>Mərhələ 1 - 6</span></h4>
+                        <div class="form-group row ">
+                            <label class="col-md-5">Ad, soyad: <span>*</span></label>
+                            <div class="col-md-7">
+                                <input type="text" asp-for="Firstname" class="form-control required">
+                                <span asp-validation-for="Firstname"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Atanızın Adı <span>*</span></label>
+                            <div class="col-md-7">
+                                <input type="text" asp-for="Lastname" class="form-control required">
+                                <span asp-validation-for="Lastname"></span>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row form-inline">
+                                <div class="form-group col-md-5">
+                                    <label>Doğum tarixi: </label>
+                                </div>
+                                <div class="form-group col-md-2 text-right">
+                                    <label>Gün: </label>
+                                    <select class="form-control select-day" asp-for="BirthDay">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                    <span asp-validation-for="BirthDay"></span>
+                                </div>
+                                <div class="form-group col-md-3 text-right">
+                                    <label>Ay: </label>
+                                    <select class="form-control select-month" asp-for="BirthMonth">
+                                        <option value="Yanvar">Yanvar</option>
+                                        <option value="Fevral">Fevral</option>
+                                        <option value="Mart">Mart</option>
+                                        <option value="Aprel">Aprel</option>
+                                        <option value="May">May</option>
+                                        <option value="İyun">İyun</option>
+                                        <option value="İyul">İyul</option>
+                                        <option value="Avqust">Avqust</option>
+                                        <option value="Sentyabr">Sentyabr</option>
+                                        <option value="Oktyabr">Oktyabr</option>
+                                        <option value="Noyabr">Noyabr</option>
+                                        <option value="Dekabr">Dekabr</option>
+                                    </select>
+                                    <span asp-validation-for="BirthMonth"></span>
+                                </div>
+                                <div class="form-group col-md-2 text-right">
+                                    <label>İl: </label>
+                                    <select class="form-control select-year" asp-for="BirthYear">
+                                        <option value="1975">1975</option>
+                                        <option value="1976">1976</option>
+                                        <option value="1977">1977</option>
+                                        <option value="1978">1978</option>
+                                        <option value="1979">1979</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1981">1981</option>
+                                        <option value="1982">1982</option>
+                                        <option value="1983">1983</option>
+                                        <option value="1984">1984</option>
+                                        <option value="1985">1985</option>
+                                        <option value="1986">1986</option>
+                                        <option value="1987">1987</option>
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option selected="" value="2020">2020</option>
+                                    </select>
+                                    <span asp-validation-for="BirthMonth"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Doğulduğunuz yer : </label>
+                            <div class="col-md-7">
+                                <select class="form-control" id="regions" asp-for="BirthCity">
+                                    <option value="">Region seçin ...</option>
+                                    <option value="Astara">Astara</option>
+                                    <option value="Ağcabədi">Ağcabədi</option>
+                                    <option value="Ağdam">Ağdam</option>
+                                    <option value="Ağdaş">Ağdaş</option>
+                                    <option value="Ağstafa">Ağstafa</option>
+                                    <option value="Ağsu">Ağsu</option>
+                                    <option value="Astara">Astara</option>
+                                    <option value="Bakı">Bakı</option>
+                                    <option value="Balakən">Balakən</option>
+                                    <option value="Beyləqan">Beyləqan</option>
+                                    <option value="Bərdə">Bərdə</option>
+                                    <option value="Biləsuvar">Biləsuvar</option>
+                                    <option value="Cəbrayıl">Cəbrayıl</option>
+                                    <option value="Cəlilabad">Cəlilabad</option>
+                                    <option value="Culfa">Culfa</option>
+                                    <option value="Daşkəsən">Daşkəsən</option>
+                                    <option value="Dəliməmmədli">Dəliməmmədli</option>
+                                    <option value="Füzuli">Füzuli</option>
+                                    <option value="Gədəbəy">Gədəbəy</option>
+                                    <option value="Gəncə">Gəncə</option>
+                                    <option value="Goranboy">Goranboy</option>
+                                    <option value="Göyçay">Göyçay</option>
+                                    <option value="Göygöl">Göygöl</option>
+                                    <option value="Göytəpə">Göytəpə</option>
+                                    <option value="İmişli">İmişli</option>
+                                    <option value="İsmayıllı">İsmayıllı</option>
+                                    <option value="Kəlbəcər">Kəlbəcər</option>
+                                    <option value="Kürdəmir">Kürdəmir</option>
+                                    <option value="Lerik">Lerik</option>
+                                    <option value="Lənkəran">Lənkəran</option>
+                                    <option value="Masallı">Masallı</option>
+                                    <option value="Mingəçevir">Mingəçevir</option>
+                                    <option value="Naftalan">Naftalan</option>
+                                    <option value="Naftalan">Naftalan</option>
+                                    <option value="Neftçala">Neftçala</option>
+                                    <option value="Oğuz">Oğuz</option>
+                                    <option value="Ordubad">Ordubad</option>
+                                    <option value="Qax">Qax</option>
+                                    <option value="Qazax">Qazax</option>
+                                    <option value="Qəbələ">Qəbələ</option>
+                                    <option value="Qobustan">Qobustan</option>
+                                    <option value="Quba">Quba</option>
+                                    <option value="Qusar">Qusar</option>
+                                    <option value="Saatlı">Saatlı</option>
+                                    <option value="Sabirabad">Sabirabad</option>
+                                    <option value="Şabran">Şabran</option>
+                                    <option value="Şahbuz">Şahbuz</option>
+                                    <option value="Salyan">Salyan</option>
+                                    <option value="Şamaxı">Şamaxı</option>
+                                    <option value="Samux">Samux</option>
+                                    <option value="Şəki">Şəki</option>
+                                    <option value="Şəmkir">Şəmkir</option>
+                                    <option value="Şərur">Şərur</option>
+                                    <option value="Şirvan">Şirvan</option>
+                                    <option value="Siyəzən">Siyəzən</option>
+                                    <option value="Sumqayıt">Sumqayıt</option>
+                                    <option value="Tərtər">Tərtər</option>
+                                    <option value="Tovuz">Tovuz</option>
+                                    <option value="Ucar">Ucar</option>
+                                    <option value="Xaçmaz">Xaçmaz</option>
+                                    <option value="Xankəndi">Xankəndi</option>
+                                    <option value="Xırdalan">Xırdalan</option>
+                                    <option value="Xızı">Xızı</option>
+                                    <option value="Xudat">Xudat</option>
+                                    <option value="Yardımlı">Yardımlı</option>
+                                    <option value="Yevlax">Yevlax</option>
+                                    <option value="Zaqatala">Zaqatala</option>
+                                    <option value="Zərdab">Zərdab</option>
+                                </select>
+                                <span asp-validation-for="BirthCity"></span>
+                            </div>
+                        </div>
+                        <!--<div class="form-group row">
+                            <label class="col-md-5">Milliyyətiniz :  <span>*</span></label>
+                            <div class="col-md-7"><input type="text" name="citizenship" placeholder="" class="form-control required"></div>
+                        </div>-->
+                        <div class="form-group row">
+                            <label class="col-md-5">Hərbi xidmətdə olmusunuzmu? </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="isArmy" name="isArmy" data-toggle_me="milserv" value="true"> Bəli
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="isArmy" name="isArmy" value="0" data-toggle_me="milserv" value="false" checked=""> Xeyr
+                                </label>
+                                <span asp-validation-for="isArmy"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Ailə vəziyyəti : </label>
+                            <div class="col-md-7">
+                                <select class="form-control" asp-for="Married">
+                                    <option value="">Seçim edin ...</option>
+                                    <option value="Evli">Evli</option>
+                                    <option value="Subay">Subay</option>
+                                    <option value="Dul">Dul</option>
+                                </select>
+                                <span asp-validation-for="Married"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Əlaqə məlumatları : <span>*</span></label>
+                            <div class="col-md-7">
+                                Əlavə et
+                                <span class="ADD" data-open="contact-popup">
+                                    <a>
+                                        Əlaqə məlumatı
+                                    </a>
+                                    <span asp-validation-for="MobileNumber"></span>
+                                    <span asp-validation-for="Email"></span>
+                                </span>
+                            </div>
+                            <div id="contact-popup" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" data-close="contact-popup">
+                                        <i class="icon-flaticon-6"></i>
+                                    </span>
+                                    <p>Əlaqə Məlumatlarını daxil edin</p>
+                                    <div class="form-group row">
+                                        <label class="col-md-4">Ev : </label>
+                                        <div class="col-md-8">
+                                            <input type="text" asp-for="HomeNumber" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4">Mobil <span>*</span> : </label>
+                                        <div class="col-md-8">
+                                            <input type="text" asp-for="MobileNumber" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4">Digər: </label>
+                                        <div class="col-md-8">
+                                            <input type="text" asp-for="OthersNumber" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4">E-poçt <span>*</span>: </label>
+                                        <div class="col-md-8">
+                                            <input type="text" asp-for="Email" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <p></p>
+                                    <div class="button btn text-center pointer" data-close="contact-popup">Tamam</div>
+                                    <p></p>
+                                </div>
 
-    <!-- Mərhələ 2 -->
-    <div class="form-wizard-step">
-        <div class="form-wizard-step-icon">
-            <i class="icon-flaticon" aria-hidden="true"></i>
-        </div>
-        <p>İş təcrübəsi</p>
-    </div>
-    <!-- Mərhələ 2 -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Yaşadığınız ünvan : <span>*</span></label>
+                            <div class="col-md-7">
+                                <input type="text" asp-for="Address" class="form-control required">
+                                <span asp-validation-for="Address"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Sürücülük vəsiqəsinin kateqoriyası : </label>
+                            <div class="col-md-7">
+                                <select class="form-control" asp-for="DriverLicense" data-toggle_me="drlisdate">
+                                    <option value="Yoxdur">Yoxdur ...</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="BC">BC</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                </select>
 
-    <!-- Mərhələ 3 -->
-    <div class="form-wizard-step">
-        <div class="form-wizard-step-icon">
-            <i class="icon-speech-streamline-talk-user" aria-hidden="true"></i>
-        </div>
-        <p>Dil</p>
-    </div>
-    <!-- Mərhələ 3 -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Şəxsi avtomobiliniz varmı? </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" name="isCar" asp-for="isCar" value="true"> Bəli
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="isCar" asp-for="isCar" value="false" checked=""> Xeyr
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Əvvəlki iş yerlərinizlə əlaqəniz varmı? </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" name="isPreviousJob" asp-for="isPreviousJob" value="true"> Bəli
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="isPreviousJob" name="isPreviousJob" value="false" checked=""> Xeyr
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Hansı vəzifə üçün müraciət edirsiniz? </label>
+                            <div class="col-md-7">
+                                <input type="text" asp-for="PositionApply" value="" class="form-control required">
+                                <span asp-validation-for="PositionApply"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-5">Vakansiya barədə məlumatı hardan əldə etmisiniz : <span>*</span></label>
+                            <div class="col-md-7">
+                                <input type="text" asp-for="VacancyInfo" class="form-control required">
+                                <span asp-validation-for="VacancyInfo"></span>
+                            </div>
+                        </div>
+                        @* <div class="form-group row"> *@
+                        @*     <label class="col-md-5">Sizə zəmanət verə biləcək şəxslər haqqında : </label> *@
+                        @*     <div class="col-md-7"> *@
+                        @*         Əlavə et *@
+                        @*         <span class="ADD" id="add-refer" data-open="refer-popup"> *@
+                        @*             <a > *@
+                        @*                 Zəmanət *@
+                        @*             </a> *@
+                        @*         </span> *@
+                        @*         <ul class="refers list-inline"></ul> *@
+                        @*     </div> *@
+                        @*     $1$ <div id="refer-popup" class="modal"> #1# *@
+                        @*     $1$     <div class="modal-content"> #1# *@
+                        @*     $1$         <span class="close" data-close="refer-popup"> #1# *@
+                        @*     $1$             <i class="icon-flaticon-6"></i> #1# *@
+                        @*     $1$         </span> #1# *@
+                        @*     $1$         <div class="form-group row"> #1# *@
+                        @*     $1$             <label class="col-md-4">Ad-soyad : </label> #1# *@
+                        @*     $1$             <div class="col-md-8"> #1# *@
+                        @*     $1$                 <input type="text" asp-for="GuaranteeName" id="refer1" class="form-control"> #1# *@
+                        @*     $1$             </div> #1# *@
+                        @*     $1$         </div> #1# *@
+                        @*     $1$         <div class="form-group row"> #1# *@
+                        @*     $1$             <label class="col-md-4">Şirkətin adı : </label> #1# *@
+                        @*     $1$             <div class="col-md-8"> #1# *@
+                        @*     $1$                 <input type="text" asp-for="GuaranteeCompany" id="refer2" class="form-control"> #1# *@
+                        @*     $1$             </div> #1# *@
+                        @*     $1$         </div> #1# *@
+                        @*     $1$         <div class="form-group row"> #1# *@
+                        @*     $1$             <label class="col-md-4">Vəzifəsi: </label> #1# *@
+                        @*     $1$             <div class="col-md-8"> #1# *@
+                        @*     $1$                 <input type="text" id="refer3" asp-for="GuaranteePosition" class="form-control"> #1# *@
+                        @*     $1$             </div> #1# *@
+                        @*     $1$         </div> #1# *@
+                        @*     $1$         <div class="form-group row"> #1# *@
+                        @*     $1$             <label class="col-md-4">Telefon : </label> #1# *@
+                        @*     $1$             <div class="col-md-8"> #1# *@
+                        @*     $1$                 <input type="text" id="refer4" asp-for="GuaranteeNumber" class="form-control"> #1# *@
+                        @*     $1$             </div> #1# *@
+                        @*     $1$         </div> #1# *@
+                        @*     $1$         <p></p> #1# *@
+                        @*     $1$         <div class="button btn text-center" data-close="refer-popup">Əlavə et</div> #1# *@
+                        @*     $1$         <p></p> #1# *@
+                        @*     $1$     </div> #1# *@
+                        @*     $1$ #1# *@
+                        @*     $1$ </div> #1# *@
+                        @* </div> *@
+                        <div class="validation" style="color: red" asp-validation-summary="All"></div>
+                        <div class="form-wizard-buttons">
+                            <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
+                            <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
+                        </div>
+                    </fieldset>
+                    <!-- Form Mərhələ 1 -->
+                    <!-- Form Mərhələ 2 -->
+                    <fieldset>
+                        <!-- Progress Bar -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="33.33333%" aria-valuemin="0" aria-valuemax="100" style="width: 33.33333%">
+                            </div>
+                        </div>
+                        <!-- Progress Bar -->
+                        <h4>İş təcrübəsi : <span>Mərhələ 2 - 6</span></h4>
+                        <div id="job_info">
+                            <div class="form-group row">
+                                <label class="col-md-5">İşlədiyiniz müəssisənin adı : <span>*</span></label>
+                                <div class="col-md-7">
+                                    <input type="text" asp-for="ExperienceCompany" class="form-control required">
+                                    <span asp-validation-for="ExperienceCompany"></span>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row form-inline">
+                                    <div class="form-group col-md-5">
+                                        <label>İşlədiyiniz müddət: </label>
+                                    </div>
+                                    <div class="form-group col-md-2 text-right">
+                                        <label>Gün: </label>
+                                        <select class="form-control" asp-for="ExperienceWorkedDay">
+                                            <option value="0">-</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3 text-right">
+                                        <label>Ay: </label>
+                                        <select class="form-control" asp-for="ExperienceWorkedMonth">
+                                            <option value="0">-</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2 text-right">
+                                        <label>İl: </label>
+                                        <select class="form-control" asp-for="ExperienceWorkedYear">
+                                            <option value="0">-</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-5">Vəzifəniz və işin qısa təsviri : <span>*</span></label>
+                                <div class="col-md-7">
+                                    <textarea asp-for="ExperiencePositionAbout" class="form-control required"></textarea>
+                                    <span asp-validation-for="ExperiencePositionAbout"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-5">Aldığınız əməkhaqqı : </label>
+                                <div class="col-md-7">
+                                    <input type="text" asp-for="ExperienceSalary" class="form-control required">
+                                    <span asp-validation-for="ExperienceSalary"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-5">İşdən çıxmağınızın səbəbi : </label>
+                                <div class="col-md-7">
+                                    <textarea asp-for="ExperienceLeftJob" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-5">İş yerinin telefon nömrəsi : </label>
+                                <div class="col-md-7">
+                                    <input type="text" asp-for="ExperienceWorkNumber" class="form-control">
+                                </div>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="form-group row text-center">
+                            <button class="btn" data-copy="job_info"><i class="icon-flaticon-2"></i> Növbəti iş yerini əlavə et</button>
+                        </div>
 
-    <!-- Mərhələ 4 -->
-    <div class="form-wizard-step">
-        <div class="form-wizard-step-icon">
-            <i class="icon-laptop-macbook-streamline" aria-hidden="true"></i>
-        </div>
-        <p>Kompüter bilikləri</p>
-    </div>
-    <!-- Mərhələ 4 -->
-    <div class="form-wizard-step">
-        <div class="form-wizard-step-icon">
-            <i class="icon-book-read-streamline" aria-hidden="true"></i>
-        </div>
-        <p>Təhsil </p>
-    </div>
-    <div class="form-wizard-step">
-        <div class="form-wizard-step-icon">
-            <i class="icon-pe-icon-7-stroke-5" aria-hidden="true"></i>
-        </div>
-        <p>Əlavə məlumatlar </p>
-    </div>
-</div>
-<!-- Form progress -->
+                        <div class="form-wizard-buttons">
+                            <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
+                            <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
+                            <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
+                            <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
+                        </div>
+                    </fieldset>
+                    <!-- Form Mərhələ 2 -->
+                    <!-- Form Mərhələ 3 -->
+                    <fieldset>
+                        <!-- Progress Bar -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                        </div>
+                        <!-- Progress Bar -->
+                        <h4>Dil bilikləri: <span>Mərhələ 3 - 6</span></h4>
+                        <div class="container-fluid">
+                            <div class="row form-inline">
+                                <div id="langs">
+                                    <div class="form-group col-md-3">
+                                        <label>Dilin adı: </label>
+                                        <select class="form-control" asp-for="LangName">
+                                            <option value="Azərbaycan dili">Azərbaycan dili</option>
+                                            <option value="Türk dili">Türk dili</option>
+                                            <option value="Rus dili">Rus dili</option>
+                                            <option value="İngilis dili">İngilis dili</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Oxuma: </label>
+                                        <select class="form-control" asp-for="Read">
+                                            <option selected="true" disabled="disabled">Seçin...</option>
+                                            <option value="Əla">Əla</option>
+                                            <option value="Yaxşı">Yaxşı</option>
+                                            <option value="Kafi">Kafi</option>
+                                            <option value="Qeyri-kafi">Qeyri-kafi</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Yazma: </label>
+                                        <select class="form-control" asp-for="Write">
+                                            <option selected="true" disabled="disabled">Seçin...</option>
+                                            <option value="Əla">Əla</option>
+                                            <option value="Yaxşı">Yaxşı</option>
+                                            <option value="Kafi">Kafi</option>
+                                            <option value="Qeyri-kafi">Qeyri-kafi</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>Anlama: </label>
+                                        <select class="form-control" asp-for="Understood">
+                                            <option selected="true" disabled="disabled">Seçin...</option>
+                                            <option value="Əla">Əla</option>
+                                            <option value="Yaxşı">Yaxşı</option>
+                                            <option value="Kafi">Kafi</option>
+                                            <option value="Qeyri-kafi">Qeyri-kafi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row text-center">
+                            <button class="btn" data-copy="langs"><i class="icon-flaticon-2"></i> Yeni dil əlavə et</button>
+                        </div>
+                        <br>
+                        <div class="form-wizard-buttons">
+                            <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
+                            <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
+                            <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
+                        </div>
+                    </fieldset>
+                    <!-- Form Mərhələ 3 -->
+                    <!-- Form Mərhələ 4 -->
+                    <fieldset>
+                        <!-- Progress Bar -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="66.66666" aria-valuemin="0" aria-valuemax="100" style="width: 66.66666%"></div>
+                        </div>
+                        <!-- Progress Bar -->
+                        <h4>Kompüter bilikləri: <span>Mərhələ 4 - 6</span></h4>
+                        <div style="clear:both;"></div>
+                        <div id="comps">
+                            <div class="container-fluid">
+                                <div class="row form-inline">
+                                    <div class="form-group col-md-6">
+                                        <label>Kompüter proqramının adı: </label>
+                                        <select class="form-control" asp-for="ComputerCourseName">
+                                            <option value="Word">Word</option>
+                                            <option value="Excel">Excel</option>
+                                            <option value="1C">1C </option>
+                                            <option value="Internet">Internet </option>
+                                            <option value="Çap sürəti">Çap sürəti</option>
+                                            <option value="Digər proqramlar/ bacarıqlar">Digər proqramlar/ bacarıqlar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Bilik səviyyəsi: </label>
+                                        <select class="form-control" asp-for="CoumputerDegree">
+                                            <option selected="true" disabled="disabled">Seçin...</option>
+                                            <option value="Əla">Əla</option>
+                                            <option value="Yaxşı">Yaxşı</option>
+                                            <option value="Kafi">Kafi</option>
+                                            <option value="Qeyri-kafi">Qeyri-kafi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button class="btn" data-copy="comps"><i class="icon-flaticon-2"></i> Əlavə et</button>
+                        </div>
+                        <br>
+                        <div class="form-wizard-buttons">
+                            <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
+                            <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
+                            <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
+                        </div>
+                    </fieldset>
+                    <!-- Form Mərhələ 4 -->
 
+                    <fieldset>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="83.33333" aria-valuemin="0" aria-valuemax="100" style="width: 83.33333%"></div>
+                        </div>
+                        <!-- Progress Bar -->
+                        <h4>Təhsil: <span>Mərhələ 5 - 6</span></h4>
+                        <div style="clear:both;"></div>
+                        <div id="education">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label>Ali təhsil aldığı müəssisə: <span>*</span></label>
+                                        <input type="text" asp-for="EducationUniName" class="form-control required">
+                                        <span asp-validation-for="EducationUniName"></span>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>
+                                            <small>Təhsil müddəti: <span>*</span></small>
+                                        </label>
+                                        <input type="text" asp-for="EducationDate" class="form-control required">
+                                        <span asp-validation-for="EducationDate"></span>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>İxtisas: <span>*</span></label>
+                                        <input type="text" asp-for="EducationSpeciality" class="form-control required">
+                                        <span asp-validation-for="EducationSpeciality"></span>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Dərəcə: <br><sub>(Bakalavr, magistr xə s)</sub> <span>*</span></label>
+                                        <input type="text" asp-for="EducationDegree" placeholder="" class="form-control required">
+                                        <span asp-validation-for="EducationDegree"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row text-center">
+                            <button class="btn" data-copy="education"><i class="icon-flaticon-2"></i> Əlavə et</button>
+                        </div>
+                        <br>
+                        <div class="form-wizard-buttons">
+                            <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
+                            <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
+                            <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                        <!-- Progress Bar -->
+                        <h4>Əlavə məlumatlar: <span>Mərhələ 6 - 6</span></h4>
+                        <div style="clear:both;"></div>
+                        <div class="form-group">
+                            <strong>
+                                Bu hiddəsə namizədliyiniz nəzərdən keçirilən zaman şirkəti maraqlandıra biləcək əlavə məlumatları qeyd edə bilərsiniz
+                                <textarea asp-for="OthersInfo" class="form-control"></textarea>
+                            </strong>
+                        </div>
+                        <strong>
+                            <br>
+                            <div class="form-wizard-buttons">
+                                <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
+                                <button type="submit" class="btn btn-submit">Göndər</button>
+                            </div>
+                        </strong>
+                    </fieldset>
+                    <strong>
 
-<!-- Form Mərhələ 1 -->
-<fieldset class="form-container" style="display: block;">
-<!-- Progress Bar -->
-<div class="progress">
-    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="16.66666" aria-valuemin="0" aria-valuemax="100" style="width: 16.6666%"></div>
-</div>
-<!-- Progress Bar -->
-<h4>Əsas məlumat: <span>Mərhələ 1 - 6</span></h4>
-<div class="form-group row ">
-    <label class="col-md-5">Ad, soyad: <span>*</span></label>
-    <div class="col-md-7">
-        <input type="text" asp-for="Firstname" class="form-control required">
-        <span asp-validation-for="Firstname"></span>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Atanızın Adı <span>*</span></label>
-    <div class="col-md-7">
-        <input type="text" asp-for="Lastname" class="form-control required">
-        <span asp-validation-for="Lastname"></span>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row form-inline">
-        <div class="form-group col-md-5">
-            <label>Doğum tarixi: </label>
-        </div>
-        <div class="form-group col-md-2 text-right">
-            <label>Gün: </label>
-            <select class="form-control select-day" asp-for="BirthDay">
-                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
-            </select>
-            <span asp-validation-for="BirthDay"></span>
-        </div>
-        <div class="form-group col-md-3 text-right">
-            <label>Ay: </label>
-            <select class="form-control select-month" asp-for="BirthMonth">
-                <option value="Yanvar">Yanvar</option>
-                <option value="Fevral">Fevral</option>
-                <option value="Mart">Mart</option>
-                <option value="Aprel">Aprel</option>
-                <option value="May">May</option>
-                <option value="İyun">İyun</option>
-                <option value="İyul">İyul</option>
-                <option value="Avqust">Avqust</option>
-                <option value="Sentyabr">Sentyabr</option>
-                <option value="Oktyabr">Oktyabr</option>
-                <option value="Noyabr">Noyabr</option>
-                <option value="Dekabr">Dekabr</option>
-            </select>
-            <span asp-validation-for="BirthMonth"></span>
-        </div>
-        <div class="form-group col-md-2 text-right">
-            <label>İl: </label>
-            <select class="form-control select-year" asp-for="BirthYear">
-                <option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option selected="" value="2020">2020</option>
-            </select>
-            <span asp-validation-for="BirthMonth"></span>
-        </div>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Doğulduğunuz yer : </label>
-    <div class="col-md-7">
-        <select class="form-control" id="regions" asp-for="BirthCity">
-            <option value="">Region seçin ...</option>
-            <option value="Astara">Astara</option>
-            <option value="Ağcabədi">Ağcabədi</option>
-            <option value="Ağdam">Ağdam</option>
-            <option value="Ağdaş">Ağdaş</option>
-            <option value="Ağstafa">Ağstafa</option>
-            <option value="Ağsu">Ağsu</option>
-            <option value="Astara">Astara</option>
-            <option value="Bakı">Bakı</option>
-            <option value="Balakən">Balakən</option>
-            <option value="Beyləqan">Beyləqan</option>
-            <option value="Bərdə">Bərdə</option>
-            <option value="Biləsuvar">Biləsuvar</option>
-            <option value="Cəbrayıl">Cəbrayıl</option>
-            <option value="Cəlilabad">Cəlilabad</option>
-            <option value="Culfa">Culfa</option>
-            <option value="Daşkəsən">Daşkəsən</option>
-            <option value="Dəliməmmədli">Dəliməmmədli</option>
-            <option value="Füzuli">Füzuli</option>
-            <option value="Gədəbəy">Gədəbəy</option>
-            <option value="Gəncə">Gəncə</option>
-            <option value="Goranboy">Goranboy</option>
-            <option value="Göyçay">Göyçay</option>
-            <option value="Göygöl">Göygöl</option>
-            <option value="Göytəpə">Göytəpə</option>
-            <option value="İmişli">İmişli</option>
-            <option value="İsmayıllı">İsmayıllı</option>
-            <option value="Kəlbəcər">Kəlbəcər</option>
-            <option value="Kürdəmir">Kürdəmir</option>
-            <option value="Lerik">Lerik</option>
-            <option value="Lənkəran">Lənkəran</option>
-            <option value="Masallı">Masallı</option>
-            <option value="Mingəçevir">Mingəçevir</option>
-            <option value="Naftalan">Naftalan</option>
-            <option value="Naftalan">Naftalan</option>
-            <option value="Neftçala">Neftçala</option>
-            <option value="Oğuz">Oğuz</option>
-            <option value="Ordubad">Ordubad</option>
-            <option value="Qax">Qax</option>
-            <option value="Qazax">Qazax</option>
-            <option value="Qəbələ">Qəbələ</option>
-            <option value="Qobustan">Qobustan</option>
-            <option value="Quba">Quba</option>
-            <option value="Qusar">Qusar</option>
-            <option value="Saatlı">Saatlı</option>
-            <option value="Sabirabad">Sabirabad</option>
-            <option value="Şabran">Şabran</option>
-            <option value="Şahbuz">Şahbuz</option>
-            <option value="Salyan">Salyan</option>
-            <option value="Şamaxı">Şamaxı</option>
-            <option value="Samux">Samux</option>
-            <option value="Şəki">Şəki</option>
-            <option value="Şəmkir">Şəmkir</option>
-            <option value="Şərur">Şərur</option>
-            <option value="Şirvan">Şirvan</option>
-            <option value="Siyəzən">Siyəzən</option>
-            <option value="Sumqayıt">Sumqayıt</option>
-            <option value="Tərtər">Tərtər</option>
-            <option value="Tovuz">Tovuz</option>
-            <option value="Ucar">Ucar</option>
-            <option value="Xaçmaz">Xaçmaz</option>
-            <option value="Xankəndi">Xankəndi</option>
-            <option value="Xırdalan">Xırdalan</option>
-            <option value="Xızı">Xızı</option>
-            <option value="Xudat">Xudat</option>
-            <option value="Yardımlı">Yardımlı</option>
-            <option value="Yevlax">Yevlax</option>
-            <option value="Zaqatala">Zaqatala</option>
-            <option value="Zərdab">Zərdab</option>
-        </select>
-        <span asp-validation-for="BirthCity"></span>
-    </div>
-</div>
-<!--<div class="form-group row">
-    <label class="col-md-5">Milliyyətiniz :  <span>*</span></label>
-    <div class="col-md-7"><input type="text" name="citizenship" placeholder="" class="form-control required"></div>
-</div>-->
-<div class="form-group row">
-    <label class="col-md-5">Hərbi xidmətdə olmusunuzmu? </label>
-    <div class="col-md-7">
-        <label class="radio-inline">
-            <input type="radio" asp-for="isArmy" name="isArmy" data-toggle_me="milserv" value="true"> Bəli
-        </label>
-        <label class="radio-inline">
-            <input type="radio" asp-for="isArmy" name="isArmy" value="0" data-toggle_me="milserv" value="false" checked=""> Xeyr
-        </label>
-        <span asp-validation-for="isArmy"></span>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Ailə vəziyyəti : </label>
-    <div class="col-md-7">
-        <select class="form-control" asp-for="Married">
-            <option value="">Seçim edin ...</option>
-            <option value="Evli">Evli</option>
-            <option value="Subay">Subay</option>
-            <option value="Dul">Dul</option>
-        </select>
-        <span asp-validation-for="Married"></span>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Əlaqə məlumatları : <span>*</span></label>
-    <div class="col-md-7">
-        Əlavə et
-        <span class="ADD" data-open="contact-popup">
-            <a>
-                Əlaqə məlumatı
-            </a>
-            <span asp-validation-for="MobileNumber"></span>
-            <span asp-validation-for="Email"></span>
-        </span>
-    </div>
-    <div id="contact-popup" class="modal">
-        <div class="modal-content">
-            <span class="close" data-close="contact-popup">
-                <i class="icon-flaticon-6"></i>
-            </span>
-            <p>Əlaqə Məlumatlarını daxil edin</p>
-            <div class="form-group row">
-                <label class="col-md-4">Ev : </label>
-                <div class="col-md-8">
-                    <input type="text" asp-for="HomeNumber" class="form-control">
-                </div>
+                    </strong>
+                </form>
             </div>
-            <div class="form-group row">
-                <label class="col-md-4">Mobil <span>*</span> : </label>
-                <div class="col-md-8">
-                    <input type="text" asp-for="MobileNumber" class="form-control required">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-4">Digər: </label>
-                <div class="col-md-8">
-                    <input type="text" asp-for="OthersNumber" class="form-control">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-4">E-poçt <span>*</span>: </label>
-                <div class="col-md-8">
-                    <input type="text" asp-for="Email" class="form-control required">
-                </div>
-            </div>
-            <p></p>
-            <div class="button btn text-center pointer" data-close="contact-popup">Tamam</div>
-            <p></p>
-        </div>
-
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Yaşadığınız ünvan : <span>*</span></label>
-    <div class="col-md-7">
-        <input type="text" asp-for="Address" class="form-control required">
-        <span asp-validation-for="Address"></span>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Sürücülük vəsiqəsinin kateqoriyası : </label>
-    <div class="col-md-7">
-        <select class="form-control" asp-for="DriverLicense" data-toggle_me="drlisdate">
-            <option value="Yoxdur">Yoxdur ...</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="BC">BC</option>
-            <option value="D">D</option>
-            <option value="E">E</option>
-        </select>
-
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Şəxsi avtomobiliniz varmı? </label>
-    <div class="col-md-7">
-        <label class="radio-inline">
-            <input type="radio" name="isCar" asp-for="isCar" value="true"> Bəli
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="isCar" asp-for="isCar" value="false" checked=""> Xeyr
-        </label>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Əvvəlki iş yerlərinizlə əlaqəniz varmı? </label>
-    <div class="col-md-7">
-        <label class="radio-inline">
-            <input type="radio" name="isPreviousJob" asp-for="isPreviousJob" value="true"> Bəli
-        </label>
-        <label class="radio-inline">
-            <input type="radio" asp-for="isPreviousJob" name="isPreviousJob" value="false" checked=""> Xeyr
-        </label>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Hansı vəzifə üçün müraciət edirsiniz? </label>
-    <div class="col-md-7">
-        <input type="text" asp-for="PositionApply" value="" class="form-control required">
-        <span asp-validation-for="PositionApply"></span>
-    </div>
-</div>
-<div class="form-group row">
-    <label class="col-md-5">Vakansiya barədə məlumatı hardan əldə etmisiniz : <span>*</span></label>
-    <div class="col-md-7">
-        <input type="text" asp-for="VacancyInfo" class="form-control required">
-        <span asp-validation-for="VacancyInfo"></span>
-    </div>
-</div>
-@* <div class="form-group row"> *@
-@*     <label class="col-md-5">Sizə zəmanət verə biləcək şəxslər haqqında : </label> *@
-@*     <div class="col-md-7"> *@
-@*         Əlavə et *@
-@*         <span class="ADD" id="add-refer" data-open="refer-popup"> *@
-@*             <a > *@
-@*                 Zəmanət *@
-@*             </a> *@
-@*         </span> *@
-@*         <ul class="refers list-inline"></ul> *@
-@*     </div> *@
-@*     $1$ <div id="refer-popup" class="modal"> #1# *@
-@*     $1$     <div class="modal-content"> #1# *@
-@*     $1$         <span class="close" data-close="refer-popup"> #1# *@
-@*     $1$             <i class="icon-flaticon-6"></i> #1# *@
-@*     $1$         </span> #1# *@
-@*     $1$         <div class="form-group row"> #1# *@
-@*     $1$             <label class="col-md-4">Ad-soyad : </label> #1# *@
-@*     $1$             <div class="col-md-8"> #1# *@
-@*     $1$                 <input type="text" asp-for="GuaranteeName" id="refer1" class="form-control"> #1# *@
-@*     $1$             </div> #1# *@
-@*     $1$         </div> #1# *@
-@*     $1$         <div class="form-group row"> #1# *@
-@*     $1$             <label class="col-md-4">Şirkətin adı : </label> #1# *@
-@*     $1$             <div class="col-md-8"> #1# *@
-@*     $1$                 <input type="text" asp-for="GuaranteeCompany" id="refer2" class="form-control"> #1# *@
-@*     $1$             </div> #1# *@
-@*     $1$         </div> #1# *@
-@*     $1$         <div class="form-group row"> #1# *@
-@*     $1$             <label class="col-md-4">Vəzifəsi: </label> #1# *@
-@*     $1$             <div class="col-md-8"> #1# *@
-@*     $1$                 <input type="text" id="refer3" asp-for="GuaranteePosition" class="form-control"> #1# *@
-@*     $1$             </div> #1# *@
-@*     $1$         </div> #1# *@
-@*     $1$         <div class="form-group row"> #1# *@
-@*     $1$             <label class="col-md-4">Telefon : </label> #1# *@
-@*     $1$             <div class="col-md-8"> #1# *@
-@*     $1$                 <input type="text" id="refer4" asp-for="GuaranteeNumber" class="form-control"> #1# *@
-@*     $1$             </div> #1# *@
-@*     $1$         </div> #1# *@
-@*     $1$         <p></p> #1# *@
-@*     $1$         <div class="button btn text-center" data-close="refer-popup">Əlavə et</div> #1# *@
-@*     $1$         <p></p> #1# *@
-@*     $1$     </div> #1# *@
-@*     $1$ #1# *@
-@*     $1$ </div> #1# *@
-@* </div> *@
-<div class="validation" style="color: red" asp-validation-summary="All"></div>
-<div class="form-wizard-buttons">
-    <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
-    <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
-</div>
-</fieldset>
-<!-- Form Mərhələ 1 -->
-
-<!-- Form Mərhələ 2 -->
-<fieldset>
-    <!-- Progress Bar -->
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="33.33333%" aria-valuemin="0" aria-valuemax="100" style="width: 33.33333%">
+            <strong>
+                <!-- /.contact us -->
+            </strong>
         </div>
     </div>
-    <!-- Progress Bar -->
-    <h4>İş təcrübəsi : <span>Mərhələ 2 - 6</span></h4>
-    <div id="job_info">
-        <div class="form-group row">
-            <label class="col-md-5">İşlədiyiniz müəssisənin adı : <span>*</span></label>
-            <div class="col-md-7">
-                <input type="text" asp-for="ExperienceCompany" class="form-control required">
-                <span asp-validation-for="ExperienceCompany"></span>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row form-inline">
-                <div class="form-group col-md-5">
-                    <label>İşlədiyiniz müddət: </label>
-                </div>
-                <div class="form-group col-md-2 text-right">
-                    <label>Gün: </label>
-                    <select class="form-control" asp-for="ExperienceWorkedDay">
-                        <option value="0">-</option>
-                        <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3 text-right">
-                    <label>Ay: </label>
-                    <select class="form-control" asp-for="ExperienceWorkedMonth">
-                        <option value="0">-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-2 text-right">
-                    <label>İl: </label>
-                    <select class="form-control" asp-for="ExperienceWorkedYear">
-                        <option value="0">-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-md-5">Vəzifəniz və işin qısa təsviri : <span>*</span></label>
-            <div class="col-md-7">
-                <textarea asp-for="ExperiencePositionAbout" class="form-control required"></textarea>
-                <span asp-validation-for="ExperiencePositionAbout"></span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-md-5">Aldığınız əməkhaqqı : </label>
-            <div class="col-md-7">
-                <input type="text" asp-for="ExperienceSalary" class="form-control required">
-                <span asp-validation-for="ExperienceSalary"></span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-md-5">İşdən çıxmağınızın səbəbi : </label>
-            <div class="col-md-7">
-                <textarea asp-for="ExperienceLeftJob" class="form-control"></textarea>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-md-5">İş yerinin telefon nömrəsi : </label>
-            <div class="col-md-7">
-                <input type="text" asp-for="ExperienceWorkNumber" class="form-control">
-            </div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-        </div>
-    </div>
-    <div class="form-group row text-center">
-        <button class="btn" data-copy="job_info"><i class="icon-flaticon-2"></i> Növbəti iş yerini əlavə et</button>
-    </div>
-
-    <div class="form-wizard-buttons">
-        <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
-        <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
-        <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
-        <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
-    </div>
-</fieldset>
-<!-- Form Mərhələ 2 -->
-
-<!-- Form Mərhələ 3 -->
-<fieldset>
-    <!-- Progress Bar -->
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
-    </div>
-    <!-- Progress Bar -->
-    <h4>Dil bilikləri: <span>Mərhələ 3 - 6</span></h4>
-    <div class="container-fluid">
-        <div class="row form-inline">
-            <div id="langs">
-                <div class="form-group col-md-3">
-                    <label>Dilin adı: </label>
-                    <select class="form-control" asp-for="LangName">
-                        <option value="Azərbaycan dili">Azərbaycan dili</option>
-                        <option value="Türk dili">Türk dili</option>
-                        <option value="Rus dili">Rus dili</option>
-                        <option value="İngilis dili">İngilis dili</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Oxuma: </label>
-                    <select class="form-control" asp-for="Read">
-                        <option selected="true" disabled="disabled">Seçin...</option>
-                        <option value="Əla">Əla</option>
-                        <option value="Yaxşı">Yaxşı</option>
-                        <option value="Kafi">Kafi</option>
-                        <option value="Qeyri-kafi">Qeyri-kafi</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Yazma: </label>
-                    <select class="form-control" asp-for="Write">
-                        <option selected="true" disabled="disabled">Seçin...</option>
-                        <option value="Əla">Əla</option>
-                        <option value="Yaxşı">Yaxşı</option>
-                        <option value="Kafi">Kafi</option>
-                        <option value="Qeyri-kafi">Qeyri-kafi</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Anlama: </label>
-                    <select class="form-control" asp-for="Understood">
-                        <option selected="true" disabled="disabled">Seçin...</option>
-                        <option value="Əla">Əla</option>
-                        <option value="Yaxşı">Yaxşı</option>
-                        <option value="Kafi">Kafi</option>
-                        <option value="Qeyri-kafi">Qeyri-kafi</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row text-center">
-        <button class="btn" data-copy="langs"><i class="icon-flaticon-2"></i> Yeni dil əlavə et</button>
-    </div>
-    <br>
-    <div class="form-wizard-buttons">
-        <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
-        <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
-        <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
-    </div>
-</fieldset>
-<!-- Form Mərhələ 3 -->
-
-<!-- Form Mərhələ 4 -->
-<fieldset>
-    <!-- Progress Bar -->
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="66.66666" aria-valuemin="0" aria-valuemax="100" style="width: 66.66666%"></div>
-    </div>
-    <!-- Progress Bar -->
-    <h4>Kompüter bilikləri: <span>Mərhələ 4 - 6</span></h4>
-    <div style="clear:both;"></div>
-    <div id="comps">
-        <div class="container-fluid">
-            <div class="row form-inline">
-                <div class="form-group col-md-6">
-                    <label>Kompüter proqramının adı: </label>
-                    <select class="form-control" asp-for="ComputerCourseName">
-                        <option value="Word">Word</option>
-                        <option value="Excel">Excel</option>
-                        <option value="1C">1C </option>
-                        <option value="Internet">Internet </option>
-                        <option value="Çap sürəti">Çap sürəti</option>
-                        <option value="Digər proqramlar/ bacarıqlar">Digər proqramlar/ bacarıqlar</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label>Bilik səviyyəsi: </label>
-                    <select class="form-control" asp-for="CoumputerDegree">
-                        <option selected="true" disabled="disabled">Seçin...</option>
-                        <option value="Əla">Əla</option>
-                        <option value="Yaxşı">Yaxşı</option>
-                        <option value="Kafi">Kafi</option>
-                        <option value="Qeyri-kafi">Qeyri-kafi</option>
-                    </select>
-                </div>
-            </div>
-            <p>&nbsp;</p>
-        </div>
-    </div>
-    <br>
-    <div class="text-center">
-        <button class="btn" data-copy="comps"><i class="icon-flaticon-2"></i> Əlavə et</button>
-    </div>
-    <br>
-    <div class="form-wizard-buttons">
-        <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
-        <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
-        <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
-    </div>
-</fieldset>
-<!-- Form Mərhələ 4 -->
-
-<fieldset>
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="83.33333" aria-valuemin="0" aria-valuemax="100" style="width: 83.33333%"></div>
-    </div>
-    <!-- Progress Bar -->
-    <h4>Təhsil: <span>Mərhələ 5 - 6</span></h4>
-    <div style="clear:both;"></div>
-    <div id="education">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <label>Ali təhsil aldığı müəssisə: <span>*</span></label>
-                    <input type="text" asp-for="EducationUniName" class="form-control required">
-                    <span asp-validation-for="EducationUniName"></span>
-                </div>
-                <div class="form-group col-md-12">
-                    <label>
-                        <small>Təhsil müddəti: <span>*</span></small>
-                    </label>
-                    <input type="text" asp-for="EducationDate" class="form-control required">
-                    <span asp-validation-for="EducationDate"></span>
-                </div>
-                <div class="form-group col-md-12">
-                    <label>İxtisas: <span>*</span></label>
-                    <input type="text" asp-for="EducationSpeciality" class="form-control required">
-                    <span asp-validation-for="EducationSpeciality"></span>
-                </div>
-                <div class="form-group col-md-12">
-                    <label>Dərəcə: <br><sub>(Bakalavr, magistr xə s)</sub> <span>*</span></label>
-                    <input type="text" asp-for="EducationDegree" placeholder="" class="form-control required">
-                    <span asp-validation-for="EducationDegree"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row text-center">
-        <button class="btn" data-copy="education"><i class="icon-flaticon-2"></i> Əlavə et</button>
-    </div>
-    <br>
-    <div class="form-wizard-buttons">
-        <p class="warning">Zəhmət olmasa vacib xanaları doldurun</p>
-        <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
-        <button type="button" class="btn btn-next">Növbəti <i class="icon-flaticon-3"></i></button>
-    </div>
-</fieldset>
-<fieldset>
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-    </div>
-    <!-- Progress Bar -->
-    <h4>Əlavə məlumatlar: <span>Mərhələ 6 - 6</span></h4>
-    <div style="clear:both;"></div>
-    <div class="form-group">
-        <strong>
-            Bu hiddəsə namizədliyiniz nəzərdən keçirilən zaman şirkəti maraqlandıra biləcək əlavə məlumatları qeyd edə bilərsiniz
-            <textarea asp-for="OthersInfo" class="form-control"></textarea>
-        </strong>
-    </div>
-    <strong>
-        <br>
-        <div class="form-wizard-buttons">
-            <button type="button" class="btn btn-previous"><i class="icon-flaticon-1"></i> Geri Qayıt </button>
-            <button type="submit" class="btn btn-submit">Göndər</button>
-        </div>
-    </strong>
-</fieldset>
-<strong>
-
-</strong>
-</form>
-</div>
-<strong>
-    <!-- /.contact us -->
-</strong>
-</div>
-</div>
 </div>
 
 @section Script
 {
-    
+
     <script src="~/js/form-wizard.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"
-                asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.validator">
-        </script>
+            asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.validator">
+    </script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"
             asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
             asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
-        </script>
-    <script >
+    </script>
+    <script>
     $("select").each(function(index, element) {
         element.removeAttribute("multiple");
     });
-    
+
     var alertNotification = document.querySelector(".alert");
         if (alertNotification != null){
             setTimeout(function() {
@@ -764,4 +865,3 @@
     </script>
 }
 
- 

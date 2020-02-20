@@ -1,31 +1,33 @@
 ﻿@model LoginViewModel
-
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewBag.Title = "Daxil ol";
+    ViewBag.Title = Localizer["Login"];
     Layout = "_Layout";
 }
 
 @section Style
 {
     <style>
-        form{
-        margin: 50px 0;
+        form {
+            margin: 50px 0;
         }
-        h2{
-        margin-top: 50px;
+
+        h2 {
+            margin-top: 50px;
         }
     </style>
 }
 
 <div id="tp-page-header" class="tp-page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Daxil ol</h1>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Localizer["Login"]</h1>
             </div>
         </div>
     </div>
+</div>
 <div id="tp-breadcrumb" class="tp-breadcrumb">
     <!-- breadcrumb -->
     <div class="container">
@@ -33,9 +35,9 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a asp-controller="Home" asp-action="Index">Ana Səhfə</a>
+                        <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
-                    <li class="active">Daxil ol </li>
+                    <li class="active">@Localizer["Login"]</li>
                 </ol>
             </div>
         </div>
@@ -46,7 +48,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h2>Daxil ol</h2>
+            <h2>@Localizer["Login"]</h2>
             <form method="post" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
@@ -63,9 +65,9 @@
                     <label asp-for="RememberMe"></label>
                     <input type="checkbox" asp-for="RememberMe">
                 </div>
-                <small><a class="text-primary" asp-controller="Account" asp-action="ForgotPassword">Parolu unutmusunuz?</a></small>
+                <small><a class="text-primary" asp-controller="Account" asp-action="ForgotPassword">@Localizer["Password"]</a></small>
                 <div>
-                    <input type="submit" value="Daxil ol" />
+                    <input type="submit" value="@Localizer["Login"]" />
                 </div>
             </form>
         </div>
@@ -73,14 +75,14 @@
 </div>
 
 @section Script{
-    
-<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"
-                    asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.validator">
-            </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"
-                asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
-            </script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"
+            asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.validator">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"
+            asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
+    </script>
 }
 

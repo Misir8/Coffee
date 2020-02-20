@@ -1,7 +1,8 @@
 ﻿@model NewsViewModel;
-
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewBag.Title = "Yeniliklər";
+    ViewBag.Title = Localizer["News"];
     Layout = "_Layout";
 }
 
@@ -12,7 +13,7 @@
             <div class="col-md-12">
                 <ol class="breadcrumb">
                     <li>
-                        <a asp-controller="Home" asp-action="Index" >Ana Səhfə</a>
+                        <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
                     <li class="active">@Model.News.Title</li>
                 </ol>
@@ -22,94 +23,94 @@
 </div>
 <!-- /.breadcrumb -->
 <div id="main-container" class="main-container">
-<!-- main container -->
-<div class="container">
-<div class="row">
-<div id="tp-blog" class="tp-blog">
-<!-- Tp Blog -->
-<div class="col-md-8 tp-left">
-<!-- Tp Left Sidebar -->
-<div class="row">
-<div class="col-md-12">
-<!-- Tp Blog Post -->
-<div class="post-holder border-bottom">
-<div class="post-img mb30">
-    <!-- pic -->
-    <img src="~/img/@Model.News.Image" class="img-responsive" alt="@Model.News.Image">
-    <div class="post-sticky"></div>
-</div>
-<!-- /.pic -->
-<div class="post-header mb30">
-    <h1 class="post-title mb10">@Model.News.Title</h1>
-</div>
-<!-- /.Tp meta -->
-<div class="post-content mb40">
-<p style="margin:0in 0in 8pt; text-align:start; -webkit-text-stroke-width:0px">
-   @Html.Raw(Model.News.Content)
-</p>
+    <!-- main container -->
+    <div class="container">
+        <div class="row">
+            <div id="tp-blog" class="tp-blog">
+                <!-- Tp Blog -->
+                <div class="col-md-8 tp-left">
+                    <!-- Tp Left Sidebar -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Tp Blog Post -->
+                            <div class="post-holder border-bottom">
+                                <div class="post-img mb30">
+                                    <!-- pic -->
+                                    <img src="~/img/@Model.News.Image" class="img-responsive" alt="@Model.News.Image">
+                                    <div class="post-sticky"></div>
+                                </div>
+                                <!-- /.pic -->
+                                <div class="post-header mb30">
+                                    <h1 class="post-title mb10">@Model.News.Title</h1>
+                                </div>
+                                <!-- /.Tp meta -->
+                                <div class="post-content mb40">
+                                    <p style="margin:0in 0in 8pt; text-align:start; -webkit-text-stroke-width:0px">
+                                        @Html.Raw(Model.News.Content)
+                                    </p>
 
 
-</div>
-<div class="post-related mb40">
-    <div class="row">
-    </div>
-</div>
-</div>
-<!-- /.Tp Blog Post -->
-</div>
-<!-- /.related post -->
-
-</div>
-
-
-</div>
-<!-- /.Tp Blog -->
-</div>
-<!-- /.Tp Left Sidebar -->
-<div class="col-md-4 right-sidebar">
-    <!-- Right Sidebar -->
-    <div class="row">
-        <div class="col-md-12">
-            <!-- Recent Post Widget -->
-            <div class="tp-recent-post-widget widget">
-                <div class="tp-bg-border tp-bg-box">
-                    <!-- bg box -->
-                    <h2>Son yeniliklər</h2>
-                </div>
-                <!-- /.bg box -->
-                <div class="tp-bg-box">
-                    <ul class="listnone">
-                        @foreach (var news in @Model.Newses)
-                        {
-                            <li>
-                                <div class="recent-block mb20">
+                                </div>
+                                <div class="post-related mb40">
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <a >
-                                                <img src="~/img/@news.Image" alt="@news.Image" class="img-responsive mb10">
-                                            </a>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <h4 class="recent-title mb10">
-                                                <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">@news.Title</a>
-                                            </h4>
-                                            <div class="post-meta">
-                                                <!-- post meta -->
-                                            </div>
-                                            <!-- /.post meta -->
-                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        }
-                    </ul>
+                            </div>
+                            <!-- /.Tp Blog Post -->
+                        </div>
+                        <!-- /.related post -->
+
+                    </div>
+
+
+                </div>
+                <!-- /.Tp Blog -->
+            </div>
+            <!-- /.Tp Left Sidebar -->
+            <div class="col-md-4 right-sidebar">
+                <!-- Right Sidebar -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Recent Post Widget -->
+                        <div class="tp-recent-post-widget widget">
+                            <div class="tp-bg-border tp-bg-box">
+                                <!-- bg box -->
+                                <h2>@Localizer["LastNews"]</h2>
+                            </div>
+                            <!-- /.bg box -->
+                            <div class="tp-bg-box">
+                                <ul class="listnone">
+                                    @foreach (var news in @Model.Newses)
+                                    {
+                                        <li>
+                                            <div class="recent-block mb20">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a>
+                                                            <img src="~/img/@news.Image" alt="@news.Image" class="img-responsive mb10">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h4 class="recent-title mb10">
+                                                            <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">@news.Title</a>
+                                                        </h4>
+                                                        <div class="post-meta">
+                                                            <!-- post meta -->
+                                                        </div>
+                                                        <!-- /.post meta -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- /.Right Sidebar -->
         </div>
     </div>
-</div>
-<!-- /.Right Sidebar -->
-</div>
-</div>
 </div>
 <!-- /.main container -->

@@ -21,7 +21,7 @@ namespace Coffe.Service
             using (var client = new SmtpClient())
             {
                 await client.ConnectAsync("smtp.gmail.com",  587, false);
-                await client.AuthenticateAsync("misiraskerov1@gmail.com", "misir@050");
+                await client.AuthenticateAsync("misiraskerov1@gmail.com", "mister@050");
                 await client.SendAsync(emailMessage);
  
                 await client.DisconnectAsync(true);
