@@ -15,7 +15,20 @@
                     <li>
                         <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
-                    <li class="active">@Model.News.Title</li>
+                    <li class="active">
+                        @if (ViewBag.Culture == "az")
+                        {
+                            @Model.News.Title
+                        }
+                        else if (ViewBag.Culture == "en")
+                        {
+                            @Model.News.TitleEn
+                        }
+                        else if (ViewBag.Culture == "ru")
+                        {
+                            @Model.News.TitleRu
+                        }
+                    </li>
                 </ol>
             </div>
         </div>
@@ -40,17 +53,48 @@
                                     <div class="post-sticky"></div>
                                 </div>
                                 <!-- /.pic -->
-                                <div class="post-header mb30">
-                                    <h1 class="post-title mb10">@Model.News.Title</h1>
-                                </div>
-                                <!-- /.Tp meta -->
-                                <div class="post-content mb40">
-                                    <p style="margin:0in 0in 8pt; text-align:start; -webkit-text-stroke-width:0px">
-                                        @Html.Raw(Model.News.Content)
-                                    </p>
+                                @if (ViewBag.Culture == "az")
+                                {
+                                    <div class="post-header mb30">
+                                        <h1 class="post-title mb10">@Model.News.Title</h1>
+                                    </div>
+                                    <!-- /.Tp meta -->
+                                    <div class="post-content mb40">
+                                        <p style="margin:0in 0in 8pt; text-align:start; -webkit-text-stroke-width:0px">
+                                            @Html.Raw(Model.News.Content)
+                                        </p>
 
 
-                                </div>
+                                    </div>
+                                }
+                                else if (ViewBag.Culture == "en")
+                                {
+                                    <div class="post-header mb30">
+                                        <h1 class="post-title mb10">@Model.News.TitleEn</h1>
+                                    </div>
+                                    <!-- /.Tp meta -->
+                                    <div class="post-content mb40">
+                                        <p style="margin:0in 0in 8pt; text-align:start; -webkit-text-stroke-width:0px">
+                                            @Html.Raw(Model.News.ContentEn)
+                                        </p>
+
+
+                                    </div>
+                                }
+                                else if (ViewBag.Culture == "ru")
+                                {
+                                    <div class="post-header mb30">
+                                        <h1 class="post-title mb10">@Model.News.TitleRu</h1>
+                                    </div>
+                                    <!-- /.Tp meta -->
+                                    <div class="post-content mb40">
+                                        <p style="margin:0in 0in 8pt; text-align:start; -webkit-text-stroke-width:0px">
+                                            @Html.Raw(Model.News.ContentRu)
+                                        </p>
+
+
+                                    </div>
+                                }
                                 <div class="post-related mb40">
                                     <div class="row">
                                     </div>
@@ -92,7 +136,20 @@
                                                     </div>
                                                     <div class="col-md-8">
                                                         <h4 class="recent-title mb10">
-                                                            <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">@news.Title</a>
+                                                            <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">
+                                                                @if (ViewBag.Culture == "az")
+                                                                {
+                                                                    @Model.News.Title
+                                                                }
+                                                                else if (ViewBag.Culture == "en")
+                                                                {
+                                                                    @Model.News.TitleEn
+                                                                }
+                                                                else if (ViewBag.Culture == "ru")
+                                                                {
+                                                                    @Model.News.TitleRu
+                                                                }
+                                                            </a>
                                                         </h4>
                                                         <div class="post-meta">
                                                             <!-- post meta -->

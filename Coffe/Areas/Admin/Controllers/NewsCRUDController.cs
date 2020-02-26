@@ -135,7 +135,11 @@ namespace Coffe.Areas.Admin.Controllers
             }
 
             newsDb.Title = news.Title;
+            newsDb.TitleEn = news.TitleEn;
+            newsDb.TitleRu = news.TitleRu;
             newsDb.Content = news.Content;
+            newsDb.ContentEn = news.ContentEn;
+            newsDb.ContentRu = news.ContentRu;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Xəbər uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));

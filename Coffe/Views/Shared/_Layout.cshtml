@@ -40,6 +40,9 @@
                 background: transparent !important;
                 border: none !important;
             }
+            .language{
+                text-transform: uppercase;
+            }
     </style>
     @RenderSection("Style", false)
     <!-- favicon icon -->
@@ -88,7 +91,10 @@
                                 <li class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
                                     <a class="animsition-link" asp-controller="News" asp-action="Index">@Localizer["News"]</a>
                                 </li>
-                                <li class="wow fadeInDown animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                                <li class="wow fadeInDown animated" data-wow-delay="0.3s" style="        visibility: visible;
+        -webkit-animation-delay: 0.3s;
+        -moz-animation-delay: 0.3s;
+        animation-delay: 0.3s;">
                                     <a class="animsition-link" asp-controller="Vacancy" asp-action="Index">@Localizer["Career"]</a>
                                 </li>
                                 <li class="wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible;-webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;">
@@ -196,6 +202,11 @@
                 menuNavbar.style.display = "none";
             }
         })
+
+        var langs = document.querySelectorAll(".language option");
+        for (var lang of langs) {
+            lang.textContent = lang.textContent.substring(0, 2);
+        }
 
     </script>
     @RenderSection("Script", false)

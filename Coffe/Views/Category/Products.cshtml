@@ -9,7 +9,20 @@
 @section Style
 {
     
-
+    
+    <style>
+      .card{
+          border: 1px solid #DCDCDC;
+         margin-bottom: 30px;
+      } 
+      .card-body{
+          padding: 20px;
+      }
+      .card-image{
+          display: flex;
+          justify-content: center;
+      }
+    </style>
 }
 <div id="tp-page-header" class="tp-page-header">
     <div class="container">
@@ -29,7 +42,7 @@
                     <li>
                         <a asp-controller="Home" asp-action="Index">@Localizer["Home"]</a>
                     </li>
-                    <li>
+                    <li class="text-dark">
                         <a>@Localizer["Products"]</a>
                     </li>
                 </ol>
@@ -41,19 +54,33 @@
 <div id="main-container" class="main-container">
     <!-- main container -->
     <div class="woo-shop" id="woo-shop">
+        <h2>@ViewBag.productCount</h2>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2>@ViewBag.productCount</h2>
-                </div>
+
                 @foreach (var product in Model.Products)
                 {
                     <div class="col-md-4 my-4">
                         <div class="card h-100">
-                            <img class="card-img-top" src="~/img/@product.Image" alt="@product.Image">
+                            <div class="card-image">
+                                <img class="card-img-top" src="~/img/@product.Image" alt="@product.Image">
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title">@product.Name</h5>
-                                <p class="card-text">@product.Description</p>
+                                @if (ViewBag.Culture == "az")
+                                {
+                                    <h5 class="card-title">@product.Name</h5>
+                                    <p class="card-text">@product.Description</p>
+                                }
+                                else if (ViewBag.Culture == "en")
+                                {
+                                    <h5 class="card-title">@product.NameEn</h5>
+                                    <p class="card-text">@product.DescriptionEn</p>
+                                }
+                                else if (ViewBag.Culture == "ru")
+                                {
+                                    <h5 class="card-title">@product.NameRu</h5>
+                                    <p class="card-text">@product.DescriptionRu</p>
+                                }
                             </div>
                         </div>
                     </div>

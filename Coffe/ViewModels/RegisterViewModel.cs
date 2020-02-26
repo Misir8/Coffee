@@ -11,15 +11,15 @@ namespace Coffe.ViewModels
         [Required(ErrorMessage = "Email sahəsi mütləq doldurulmalıdır")]
         [Display(Name = "Email")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Parol sahəsi mütləq doldurulmalıdır")]
+        [Required(ErrorMessage = "PasswordReq")]
         [DataType(DataType.Password)]
-        [Display(Name = "Parol")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
  
-        [Required(ErrorMessage = "Parolu təstiq et sahəsi mütləq doldurulmalıdır")]
-        [Compare("Password", ErrorMessage = "Parollar üst-üstə düşmür")]
+        [Required(ErrorMessage = "PasswordConfirmReq")]
+        [Compare("Password", ErrorMessage = "Pass")]
         [DataType(DataType.Password)]
-        [Display(Name = "Parolu təsdiq et")]
+        [Display(Name = "PasswordConfirm")]
         public string PasswordConfirm { get; set; }
     }
 }

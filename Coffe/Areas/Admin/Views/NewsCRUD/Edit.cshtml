@@ -32,26 +32,47 @@
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <div class="form-group">
                                 <label asp-for="Photo"></label>
-                                <input type="file" class="form-control" asp-for="Photo" name="Photo"/>
+                                <input type="file" class="form-control" asp-for="Photo" name="Photo" />
                                 <span asp-validation-for="Photo" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label>İndiki Şəkil</label>
-                                <img src="~/img/@Model.Image" alt="slider"/>
-                                <input type="hidden" name="Image" value="@Model.Image"/>
+                                <img src="~/img/@Model.Image" alt="slider" />
+                                <input type="hidden" name="Image" value="@Model.Image" />
                             </div>
                             <div class="form-group">
                                 <label asp-for="Title" class="control-label"></label>
-                                <input asp-for="Title" class="form-control"/>
+                                <input asp-for="Title" class="form-control" />
                                 <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TitleEn" class="control-label"></label>
+                                <input asp-for="TitleEn" class="form-control" />
+                                <span asp-validation-for="TitleEn" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TitleRu" class="control-label"></label>
+                                <input asp-for="TitleRu" class="form-control" />
+                                <span asp-validation-for="TitleRu" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label asp-for="Content" class="control-label"></label>
                                 <textarea asp-for="Content" name="Content" class="form-control"></textarea>
                                 <span asp-validation-for="Content" class="text-danger"></span>
                             </div>
+
                             <div class="form-group">
-                                <input type="submit" value="Dəyiş" class="btn btn-block btn-success"/>
+                                <label asp-for="ContentEn" class="control-label"></label>
+                                <textarea asp-for="ContentEn" class="form-control" name="ContentEn"></textarea>
+                                <span asp-validation-for="ContentEn" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ContentRu" class="control-label"></label>
+                                <textarea asp-for="ContentRu" class="form-control" name="ContentRu"></textarea>
+                                <span asp-validation-for="ContentRu" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Dəyiş" class="btn btn-block btn-success" />
                             </div>
                         </form>
                     </div>
@@ -76,6 +97,16 @@
         <script>
                 ClassicEditor
                     .create( document.querySelector( '#Content' ) )
+                    .catch( error => {
+                        console.error( error );
+                    });
+            ClassicEditor
+                    .create( document.querySelector( '#ContentEn' ) )
+                    .catch( error => {
+                        console.error( error );
+                    });
+            ClassicEditor
+                    .create( document.querySelector( '#ContentRu' ) )
                     .catch( error => {
                         console.error( error );
                     } );

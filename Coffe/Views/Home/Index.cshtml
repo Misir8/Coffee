@@ -8,6 +8,24 @@
     Layout = "_Layout";
 }
 
+@section Style{ 
+    <style>
+        #slider{
+            position: relative;
+        }
+        .caption{
+                position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        }
+    </style>
+}
 
 
 <div class="lp-slider">
@@ -16,18 +34,12 @@
         @foreach (var slider in Model.Sliders)
         {
             <div class="item-image ">
-                <img src="~/img/@slider.Image" style="height: 100vh; object-fit: cover;width: 100vw" alt="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="slider-captions">
-                                <div class="h1 slider-title wow fadeInLeft animated" style="visibility: visible;">@slider.Title.ToUpper()</div>
-                                <p class="slider-text wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"></p>
-                                <p>@slider.Subtitle.ToUpper()</p>
-                            </div>
+                <img src="~/img/@slider.Image" style="height: 100vh; object-fit: cover; width: 100vw" alt="">
+                
                         </div>
-                    </div>
-                </div>
+            <div class="caption">
+                <h1>@slider.Title.ToUpper()</h1>
+                <h3>@slider.Subtitle.ToUpper()</h3>
             </div>
         }
     </div>

@@ -11,7 +11,11 @@
             <img class="card-img-top" src="~/img/@Model.Image" alt="slider">
             <div class="card-body">
                 <h5 class="card-title">@Model.Title</h5>
+                <h5 class="card-title">@Model.TitleEn</h5>
+                <h5 class="card-title">@Model.TitleRu</h5>
                 <p class="card-text">@Html.Raw(Model.Content)</p>
+                <p class="card-text">@Html.Raw(Model.ContentEn)</p>
+                <p class="card-text">@Html.Raw(Model.ContentRu)</p>
                 <a asp-action="Index" class="btn btn-primary">Geri qayıt</a>
             </div>
         </div>

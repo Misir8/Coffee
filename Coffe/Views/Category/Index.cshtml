@@ -66,7 +66,20 @@
                                                         </a>
                                                         <div class="product-info">
                                                             <h2>
-                                                                <a asp-controller="Category" asp-action="Products" asp-route-id="@category.Id">@category.Name</a>
+                                                                <a asp-controller="Category" asp-action="Products" asp-route-id="@category.Id">
+                                                                    @if (ViewBag.Culture == "az")
+                                                                    {
+                                                                        @category.Name
+                                                                    }
+                                                                    else if (ViewBag.Culture == "en")
+                                                                    {
+                                                                        @category.NameEn
+                                                                    }
+                                                                    else if (ViewBag.Culture == "ru")
+                                                                    {
+                                                                        @category.NameRu
+                                                                    }
+                                                                </a>
                                                             </h2>
                                                             <a asp-controller="Category" asp-action="Products" asp-route-id="@category.Id">@Localizer["Products"]</a>
                                                         </div>

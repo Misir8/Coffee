@@ -50,6 +50,8 @@ namespace Coffe.Areas.Admin.Controllers
             
 
             historyDb.Description = history.Description;
+            historyDb.DescriptionEn = history.DescriptionEn;
+            historyDb.DescriptionRu = history.DescriptionRu;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Dəyərlərimiz məlumatı uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));

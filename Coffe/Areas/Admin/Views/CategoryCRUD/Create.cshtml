@@ -21,16 +21,26 @@
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <div class="form-group">
                                 <label asp-for="Photo"></label>
-                                <input type="file" class="form-control" asp-for="Photo" name="Photo"/>
+                                <input type="file" class="form-control" asp-for="Photo" name="Photo" />
                                 <span asp-validation-for="Photo" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label asp-for="Name" class="control-label"></label>
-                                <input asp-for="Name" class="form-control"/>
+                                <input asp-for="Name" class="form-control" />
                                 <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Əlavə Et" class="btn btn-block btn-success"/>
+                                <label asp-for="NameEn" class="control-label"></label>
+                                <input asp-for="NameEn" class="form-control" />
+                                <span asp-validation-for="NameEn" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NameRu" class="control-label"></label>
+                                <input asp-for="NameRu" class="form-control" />
+                                <span asp-validation-for="NameRu" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Əlavə Et" class="btn btn-block btn-success" />
                             </div>
                         </form>
                     </div>

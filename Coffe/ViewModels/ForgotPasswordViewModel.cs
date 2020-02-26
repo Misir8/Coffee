@@ -4,7 +4,7 @@ namespace Coffe.ViewModels
 {
     public class ForgotPasswordViewModel
     {
-        [Required(ErrorMessage = "Email sahəsi boş olmalı deyil")]
+        [Required(ErrorMessage = "EmailReq")]
         [EmailAddress]
         public string Email { get; set; }
     }

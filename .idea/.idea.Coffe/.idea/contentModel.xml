@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\User\.Rider2019.3\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Coffe.1213142090.00" t="ExcludeRecursive" />
     <e p="C:\Users\User\RiderProjects\Coffe" t="IncludeFlat">
@@ -167,6 +168,22 @@
           <e p="20200215084756_added required language prop.Designer.cs" t="Include" />
           <e p="20200219082737_added about translate.cs" t="Include" />
           <e p="20200219082737_added about translate.Designer.cs" t="Include" />
+          <e p="20200221062716_added data annatitions translate.cs" t="Include" />
+          <e p="20200221062716_added data annatitions translate.Designer.cs" t="Include" />
+          <e p="20200221063435_data translate.cs" t="Include" />
+          <e p="20200221063435_data translate.Designer.cs" t="Include" />
+          <e p="20200221075129_added target translate.cs" t="Include" />
+          <e p="20200221075129_added target translate.Designer.cs" t="Include" />
+          <e p="20200221080743_added history translate.cs" t="Include" />
+          <e p="20200221080743_added history translate.Designer.cs" t="Include" />
+          <e p="20200221081622_added value translate.cs" t="Include" />
+          <e p="20200221081622_added value translate.Designer.cs" t="Include" />
+          <e p="20200221082711_added category translate.cs" t="Include" />
+          <e p="20200221082711_added category translate.Designer.cs" t="Include" />
+          <e p="20200221102113_added products translate.cs" t="Include" />
+          <e p="20200221102113_added products translate.Designer.cs" t="Include" />
+          <e p="20200221103906_added news translate.cs" t="Include" />
+          <e p="20200221103906_added news translate.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -204,8 +221,93 @@
           </e>
         </e>
         <e p="Resources" t="Include">
+          <e p="ViewModels" t="Include">
+            <e p="ContactViewModel.az.resx" t="Include" />
+            <e p="ContactViewModel.en.resx" t="Include" />
+            <e p="ContactViewModel.ru.resx" t="Include" />
+            <e p="ForgotPasswordViewModel.az.resx" t="Include" />
+            <e p="ForgotPasswordViewModel.en.resx" t="Include" />
+            <e p="ForgotPasswordViewModel.ru.resx" t="Include" />
+            <e p="LoginViewModel.az.resx" t="Include" />
+            <e p="LoginViewModel.en.resx" t="Include" />
+            <e p="LoginViewModel.ru.resx" t="Include" />
+            <e p="RegisterViewModel.az.resx" t="Include" />
+            <e p="RegisterViewModel.en.resx" t="Include" />
+            <e p="RegisterViewModel.ru.resx" t="Include" />
+            <e p="ResetPasswordViewModel.az.resx" t="Include" />
+            <e p="ResetPasswordViewModel.en.resx" t="Include" />
+            <e p="ResetPasswordViewModel.ru.resx" t="Include" />
+          </e>
           <e p="Views" t="Include">
+            <e p="about" t="Include">
+              <e p="History.az.resx" t="Include" />
+              <e p="History.en.resx" t="Include" />
+              <e p="History.ru.resx" t="Include" />
+              <e p="Index.az.resx" t="Include" />
+              <e p="Index.en.resx" t="Include" />
+              <e p="Index.ru.resx" t="Include" />
+              <e p="Target.az.resx" t="Include" />
+              <e p="Target.en.resx" t="Include" />
+              <e p="Target.ru.resx" t="Include" />
+              <e p="Value.az.resx" t="Include" />
+              <e p="Value.en.resx" t="Include" />
+              <e p="Value.ru.resx" t="Include" />
+            </e>
+            <e p="Account" t="Include">
+              <e p="ForgotPassword.az.resx" t="Include" />
+              <e p="ForgotPassword.en.resx" t="Include" />
+              <e p="ForgotPassword.ru.resx" t="Include" />
+              <e p="ForgotPasswordConfirmation.az.resx" t="Include" />
+              <e p="ForgotPasswordConfirmation.en.resx" t="Include" />
+              <e p="ForgotPasswordConfirmation.ru.resx" t="Include" />
+              <e p="Login.az.resx" t="Include" />
+              <e p="Login.en.resx" t="Include" />
+              <e p="Login.ru.resx" t="Include" />
+              <e p="PasswordConfirm.az.resx" t="Include" />
+              <e p="PasswordConfirm.en.resx" t="Include" />
+              <e p="PasswordConfirm.ru.resx" t="Include" />
+              <e p="Register.az.resx" t="Include" />
+              <e p="Register.en.resx" t="Include" />
+              <e p="Register.ru.resx" t="Include" />
+              <e p="ResetPassword.az.resx" t="Include" />
+              <e p="ResetPassword.en.resx" t="Include" />
+              <e p="ResetPassword.ru.resx" t="Include" />
+              <e p="ResetPasswordConfirmation.az.resx" t="Include" />
+              <e p="ResetPasswordConfirmation.en.resx" t="Include" />
+              <e p="ResetPasswordConfirmation.ru.resx" t="Include" />
+            </e>
+            <e p="Category" t="Include">
+              <e p="Index.az.resx" t="Include" />
+              <e p="Index.en.resx" t="Include" />
+              <e p="Index.ru.resx" t="Include" />
+              <e p="Products.az.resx" t="Include" />
+              <e p="Products.en.resx" t="Include" />
+              <e p="Products.ru.resx" t="Include" />
+            </e>
+            <e p="Contact" t="Include">
+              <e p="Index.az.resx" t="Include" />
+              <e p="Index.en.resx" t="Include" />
+              <e p="Index.ru.resx" t="Include" />
+            </e>
             <e p="Home" t="Include">
+              <e p="Index.az.resx" t="Include" />
+              <e p="Index.en.resx" t="Include" />
+              <e p="Index.ru.resx" t="Include" />
+            </e>
+            <e p="News" t="Include">
+              <e p="Details.az.resx" t="Include" />
+              <e p="Details.en.resx" t="Include" />
+              <e p="Details.ru.resx" t="Include" />
+              <e p="Index.az.resx" t="Include" />
+              <e p="Index.en.resx" t="Include" />
+              <e p="Index.ru.resx" t="Include" />
+            </e>
+            <e p="Shared" t="Include">
+              <e p="_Layout.az.resx" t="Include" />
+              <e p="_Layout.en.resx" t="Include" />
+              <e p="_Layout.ru.resx" t="Include" />
+            </e>
+            <e p="Vacancy" t="Include">
               <e p="Index.az.resx" t="Include" />
               <e p="Index.en.resx" t="Include" />
               <e p="Index.ru.resx" t="Include" />
@@ -2891,7 +2993,10 @@
             <e p="2878bcac-e2a3-4af6-aca0-c566743142c62.jpg" t="Include" />
             <e p="5788c06a-d2f1-4ee8-8bc7-34c5e7ada111s-5.jpg" t="Include" />
             <e p="ac311472-fdea-4b8e-9c16-31a2f3e371651.jpg" t="Include" />
+            <e p="aecf7efd-5940-4c69-a208-504f15313e3blays.png" t="Include" />
+            <e p="b4240e48-f5a5-4c7e-93e3-b709f26884e2placeholder.png" t="Include" />
             <e p="bebeto2417.png" t="Include" />
+            <e p="ca054a5f-5e84-411f-b325-55f2a272b334admin.jpg" t="Include" />
             <e p="e15df24d-5ed0-4650-af01-1b86470c72181.jpg" t="Include" />
             <e p="elvan.png" t="Include" />
             <e p="hqdefault.jpg" t="Include" />

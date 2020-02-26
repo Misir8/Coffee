@@ -4,16 +4,16 @@ namespace Coffe.ViewModels
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Email sahəsi boş olmalı deyil")]
+        [Required(ErrorMessage = "EmailReq")]
         [Display(Name = "Email")]
         public string Email { get; set; }
  
-        [Required (ErrorMessage = "Parol sahəsi boş olmalı deyil")]
+        [Required (ErrorMessage = "PassReq")]
         [DataType(DataType.Password)]
-        [Display(Name = "Parol")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
  
-        [Display(Name = "Yadda saxla?")]
+        [Display(Name = "Remember")]
         public bool RememberMe { get; set; }
  
         public string ReturnUrl { get; set; }

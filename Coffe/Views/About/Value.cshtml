@@ -61,7 +61,18 @@
                         <div class="col-md-12 text-justify font17">
                             @foreach (var value in Model)
                             {
-                                <p>@value.Description</p>
+                                if (ViewBag.Culture == "az")
+                                {
+                                    <p>@value.Description</p>
+                                }
+                                else if (ViewBag.Culture == "en")
+                                {
+                                    <p>@value.DescriptionEn</p>
+                                }
+                                else if (ViewBag.Culture == "ru")
+                                {
+                                    <p>@value.DescriptionRu</p>
+                                }
                             }
                         </div>
                         <div class="col-md-12">

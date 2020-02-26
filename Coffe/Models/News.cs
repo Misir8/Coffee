@@ -13,10 +13,22 @@ namespace Coffe.Models
         [DisplayName("Başlıq")]
         [StringLength(255, ErrorMessage = "Başlığın uzunluğu 255 simvoldan çox ola bilməz")]
         public string Title { get; set; }
-        
+        [DisplayName("Başlıq (ingliscə)")]
+        [StringLength(255, ErrorMessage = "Başlığın uzunluğu 255 simvoldan çox ola bilməz")]
+        public string TitleEn { get; set; }
+        [DisplayName("Başlıq (rusca)")]
+        [StringLength(255, ErrorMessage = "Başlığın uzunluğu 255 simvoldan çox ola bilməz")]
+        public string TitleRu { get; set; }
+
         [Required(ErrorMessage = "Mətn xanası boş ola bilməz")]
         [DisplayName("Mətn")]
         public string Content { get; set; }
+        [Required(ErrorMessage = "Mətn xanası boş ola bilməz")]
+        [DisplayName("Mətn (ingliscə)")]
+        public string ContentEn { get; set; }
+        [Required(ErrorMessage = "Mətn xanası boş ola bilməz")]
+        [DisplayName("Mətn (rusca)")]
+        public string ContentRu { get; set; }
         public string Image { get; set; }
         [DisplayName("Şəkil")]
         [NotMapped]

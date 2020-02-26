@@ -51,6 +51,8 @@ namespace Coffe.Areas.Admin.Controllers
             
 
             targetDb.Description = target.Description;
+            targetDb.DescriptionRu = target.DescriptionRu;
+            targetDb.DescriptionEn = target.DescriptionEn;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Məqsəd və missiyamız məlumatı uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));

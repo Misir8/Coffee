@@ -51,7 +51,20 @@
                             </div>
                             <div class="service-content">
                                 <h2>
-                                    <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">@news.Title </a>
+                                    <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id">
+                                        @if (ViewBag.Culture == "az")
+                                        {
+                                            @news.Title
+                                        }
+                                        else if (ViewBag.Culture == "en")
+                                        {
+                                            @news.TitleEn
+                                        }
+                                        else if (ViewBag.Culture == "ru")
+                                        {
+                                            @news.TitleRu
+                                        }
+                                    </a>
                                 </h2>
                                 <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" class="btn btn-default">@Localizer["ReadMore"]</a>
                             </div>

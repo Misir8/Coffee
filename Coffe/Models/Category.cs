@@ -11,6 +11,10 @@ namespace Coffe.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "Kateqoriyanın adı boş ola bilməz"), StringLength(255, ErrorMessage = "Kateqoriyanın adı maksimum 255 simvoldan ibarət ola bilər"), DisplayName("Ad")]
         public string Name { get; set; }
+        [Required, DisplayName("Ad (ingliscə)")]
+        public string NameEn { get; set; }
+        [Required, DisplayName("Ad (rusca)")]
+        public string NameRu { get; set; }
         public string Image { get; set; }
         [NotMapped, DisplayName("Şəkil")]
         public IFormFile Photo { get; set; }

@@ -6,7 +6,7 @@ namespace Coffe.Models
     public class Contact
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Ad və soyad xanası boş ola biməz")]
+        [Required(ErrorMessage = "FirstReq")]
         [StringLength(255, ErrorMessage = "Ad və soyad xanasında maksimum 255 simvol ola bilər")]
         [DisplayName("Ad soyad")]
         public string Firstname { get; set; }

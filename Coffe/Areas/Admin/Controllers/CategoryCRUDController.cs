@@ -142,6 +142,8 @@ namespace Coffe.Areas.Admin.Controllers
             }
 
             categoryDb.Name = category.Name;
+            categoryDb.NameEn = category.NameEn;
+            categoryDb.NameRu = category.NameRu;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Kateqoriya uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));

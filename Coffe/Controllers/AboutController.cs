@@ -29,18 +29,21 @@ namespace Coffe.Controllers
 
         public async Task<IActionResult> Target()
         {
+            ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
             var targets = await _context.Targets.ToListAsync();
             return View(targets);
         }
 
         public async Task<IActionResult> History()
         {
+            ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
             var histories = await _context.Histories.ToListAsync();
             return View(histories);
         }
 
         public async Task<IActionResult> Value()
         {
+            ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
             var values = await _context.Values.ToListAsync();
             return View(values);
         }

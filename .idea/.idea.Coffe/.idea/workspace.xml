@@ -2,51 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69145c6b-3105-4f6e-b25c-fa45926f2293" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/ForgotPassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/ForgotPasswordConfirmation.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/Login.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/PasswordConfirm.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/Register.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/ResetPassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coffe/Views/Account/ResetPasswordConfirmation.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coffe/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Coffe/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Coffe/DesignTimeBuild/.dtbcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Coffe/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Coffe/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Coffe/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Coffe/v16/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/AboutsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/AboutsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Abouts/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Coffe.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Coffe.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/CategoryCRUDController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/CategoryCRUDController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/HistoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/HistoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/NewsCRUDController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/NewsCRUDController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ProductCRUDController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ProductCRUDController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/TargetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/TargetController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ValueController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Controllers/ValueController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/CategoryCRUD/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/History/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/History/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/NewsCRUD/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/ProductCRUD/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Target/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Target/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Value/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Areas/Admin/Views/Value/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Controllers/AboutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/AboutController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Controllers/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/CategoryController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Controllers/NewsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/DAL/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/DAL/DataContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Models/About.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/About.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/Contact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/History.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/History.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/News.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/News.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Models/Value.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Models/Value.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/ViewModels/ContactViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/ViewModels/ContactViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/ViewModels/ForgotPasswordViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/ViewModels/ForgotPasswordViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/ViewModels/LoginViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/ViewModels/LoginViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/ViewModels/RegisterViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/ViewModels/RegisterViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/ViewModels/ResetPasswordViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/ViewModels/ResetPasswordViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/History.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/History.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/Target.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/Target.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/About/Value.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/About/Value.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/Category/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Category/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/Category/Products.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Category/Products.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/News/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/News/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/News/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/Views/Shared/_SelectLanguagePartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/Views/Shared/_SelectLanguagePartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/Coffe.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/az/Coffe.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/az/Coffe.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/en/Coffe.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/en/Coffe.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/ru/Coffe.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/bin/Debug/netcoreapp3.1/ru/Coffe.resources.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Coffe.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Abouts/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Abouts/Edit.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CategoryCRUD/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CategoryCRUD/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CategoryCRUD/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CategoryCRUD/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CategoryCRUD/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/CategoryCRUD/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/History/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/History/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/NewsCRUD/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/NewsCRUD/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/NewsCRUD/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/NewsCRUD/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/NewsCRUD/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/NewsCRUD/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/ProductCRUD/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/ProductCRUD/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/ProductCRUD/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/ProductCRUD/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/ProductCRUD/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/ProductCRUD/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Target/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Target/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Value/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Value/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/History.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/History.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Target.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Target.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Value.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/About/Value.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Products.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Category/Products.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/News/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/News/Details.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/News/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/News/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/wwwroot/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coffe/wwwroot/img/d9d951a3-103d-4b81-9338-a77bde86948e4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_SelectLanguagePartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_SelectLanguagePartial.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/az/Coffe.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/az/Coffe.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/en/Coffe.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/en/Coffe.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/ru/Coffe.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Coffe/obj/Debug/netcoreapp3.1/ru/Coffe.resources.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,6 +441,7 @@
       <workItem from="1582028685342" duration="2592000" />
       <workItem from="1582099632287" duration="1127000" />
       <workItem from="1582100798685" duration="1406000" />
+      <workItem from="1582635782778" duration="815000" />
     </task>
     <servers />
   </component>
@@ -533,7 +580,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml</url>
-          <line>24</line>
+          <line>38</line>
           <properties documentPath="$PROJECT_DIR$/Coffe/Views/Home/Index.cshtml" initialLine="24" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>

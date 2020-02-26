@@ -33,32 +33,51 @@
                             <div class="form-group">
                                 <label asp-for="CategoryId">Category</label>
                                 <select class="form-control" asp-for="CategoryId" asp-items="ViewBag.Categories as SelectList">
-                                    
                                 </select>
                                 <span asp-validation-for="CategoryId" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label asp-for="Photo"></label>
-                                <input type="file" class="form-control" asp-for="Photo" name="Photo"/>
+                                <input type="file" class="form-control" asp-for="Photo" name="Photo" />
                                 <span asp-validation-for="Photo" class="text-danger"></span>
                             </div>
                             <div class="form-group">
                                 <label>İndiki Şəkil</label>
-                                <img src="~/img/@Model.Image" alt="slider"/>
-                                <input type="hidden" name="Image" value="@Model.Image"/>
+                                <img src="~/img/@Model.Image" alt="slider" />
+                                <input type="hidden" name="Image" value="@Model.Image" />
                             </div>
                             <div class="form-group">
                                 <label asp-for="Name" class="control-label"></label>
-                                <input asp-for="Name" class="form-control"/>
+                                <input asp-for="Name" class="form-control" />
                                 <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                             <div class="form-group">
+                                <label asp-for="NameEn" class="control-label"></label>
+                                <input asp-for="NameEn" class="form-control" />
+                                <span asp-validation-for="NameEn" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NameRu" class="control-label"></label>
+                                <input asp-for="NameRu" class="form-control" />
+                                <span asp-validation-for="NameRu" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
                                 <label asp-for="Description" class="control-label"></label>
-                                <input asp-for="Description" class="form-control"/>
+                                <input asp-for="Description" class="form-control" />
                                 <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Dəyiş" class="btn btn-block btn-success"/>
+                                <label asp-for="DescriptionEn" class="control-label"></label>
+                                <input asp-for="DescriptionEn" class="form-control" />
+                                <span asp-validation-for="DescriptionEn" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DescriptionRu" class="control-label"></label>
+                                <input asp-for="DescriptionRu" class="form-control" />
+                                <span asp-validation-for="DescriptionRu" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Dəyiş" class="btn btn-block btn-success" />
                             </div>
                         </form>
                     </div>

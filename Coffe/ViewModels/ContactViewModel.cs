@@ -9,20 +9,20 @@ namespace Coffe.ViewModels
     {
         public Contact Contact { get; set; }
         
-        [Required(ErrorMessage = "Ad və soyad xanası boş ola biməz")]
+        [Required(ErrorMessage = "FirstReq")]
         [StringLength(255, ErrorMessage = "Ad və soyad xanasında maksimum 255 simvol ola bilər")]
         [DisplayName("Ad soyad")]
         public string Firstname { get; set; }
-        [Required(ErrorMessage = "Email xanası boş ola bilməz")] 
-        [StringLength(255, ErrorMessage = "Email xanasında maksimum 255 simvol ola bilər")]
-        [EmailAddress(ErrorMessage = "Email ünvanı düzgün yazın")] 
+        [Required(ErrorMessage = "EmailReq")] 
+        [StringLength(255, ErrorMessage = "EmailStringLength")]
+        [EmailAddress(ErrorMessage = "EmailAddress")] 
         [DisplayName("E-poçt")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Telefon xanası boş ola bilməz")]
-        [StringLength(255, ErrorMessage = "Telefon xanasında maksimum 255 simvol ola bilər")]
+        [Required(ErrorMessage = "PhoneReq")]
+        [StringLength(255, ErrorMessage = "PhoneNumLength")]
         [DisplayName("Telefon")]
         public string Number { get; set; }
-        [Required(ErrorMessage = "Mesaj xanası boş ola bilməz")]
+        [Required(ErrorMessage = "MesReq")]
         [DisplayName("Mesaj")]
         public string Message { get; set; }
     }

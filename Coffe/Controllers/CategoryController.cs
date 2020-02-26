@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Coffe.DAL;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace Coffe.Controllers
         // GET
         public async Task<IActionResult> Index()
         {
+            ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
             var categories = await _context.Categories.ToListAsync();
             return View(categories);
         }
@@ -34,6 +36,7 @@ namespace Coffe.Controllers
                     {
                         ViewBag.productCount = "Kateqoriyada məhsul yoxdur";
                     }
+                    ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
                     return View(categoryPoduct);
                 }
             }

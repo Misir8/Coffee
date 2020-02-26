@@ -150,7 +150,11 @@ namespace Coffe.Areas.Admin.Controllers
             }
 
             productDb.Name = product.Name;
+            productDb.NameEn = product.NameEn;
+            productDb.NameRu = product.NameRu;
             productDb.Description = product.Description;
+            productDb.DescriptionEn = product.DescriptionEn;
+            productDb.DescriptionRu = product.DescriptionRu;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Məhsul uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));

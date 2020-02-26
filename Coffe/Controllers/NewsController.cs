@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Coffe.DAL;
 using Coffe.ViewModels;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ReflectionIT.Mvc.Paging;
@@ -19,6 +20,7 @@ namespace Coffe.Controllers
         // GET
         public async Task<IActionResult> Index(int page = 1)
         {
+            ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
             var query = _context.Newses.AsNoTracking().OrderByDescending(n => n.Id);
             var model = await PagingList.CreateAsync(query, 8, page);
             return View(model);
@@ -36,6 +38,7 @@ namespace Coffe.Controllers
                 
                 if (vm.News != null)
                 {
+                    ViewBag.Culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
                     return View(vm);
                 }
             }
